@@ -1,8 +1,12 @@
 <?php
 namespace model;
-// standard local/root db settings file in project root (unsafe but for simplicity of running the code).
 
 class registryDatabase {
+
+    //TODO
+        // refactor functions to increase abstraction level
+        // try catch and throw exceptions
+        // run arguments through validation
 
 
     private function connectDatabase() {
@@ -245,6 +249,6 @@ class registryDatabase {
         }
 
         return $membersAndBoats;
-        
+
     }
 }
