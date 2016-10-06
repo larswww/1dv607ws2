@@ -17,7 +17,7 @@ class UpdateMemberForm{
 
   public function show(){
     return "
-    <form action='?action=updateMember' method="POST">
+    <form action='?action=updateMember' method='POST'>
 
     <legend>First name
       <input type='text' name='firstname' value='{$this->firstname}'>
@@ -35,5 +35,4 @@ class UpdateMemberForm{
     <a href='?action=deleteMember&id={$this->id}'>Delete member</a>
     ";
   }
-
 }

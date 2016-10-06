@@ -7,3 +7,6 @@ View är i sig en main layout med html-head och body. I bodyn trycks det in en p
 View förväntar sig ett partialObject och eventuell data (new PartialName(), array data);
 
 Vyn är väldigt verbos. Inga krav ställs på ett nice flöde eller bra felhantering. Vid ett eventuellt databasfel finns det en egen partialklass som tar hand om det. Kanske ändra till en och samma partial för alla fellmeddelanden och skicka in ett färdiggenererat meddelande istället?
+
+
+TODO: untrack view/partials/abstractList.php

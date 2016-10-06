@@ -1,6 +1,6 @@
 <?php
 
-abstract class CompactList{
+class VerboseList{
 
   private $memberList;
 
@@ -13,9 +13,9 @@ abstract class CompactList{
     $str = "";
 
     foreach ($this->memberList as $key => $value) {
-      $boatList = $this->boatList($key['boats'])
+      $boatList = $this->boatList($key['boats']);
       $str .= "
-      <div class="listBox">
+      <div class='listBox'>
       name: {$key['firstName']} {$key['lastName']}<br>
       personal id: {$key['personalId']}<br>
       id: {$key['memberId']}
@@ -26,7 +26,7 @@ abstract class CompactList{
   }
 
   private function boatlist(){
-    $str = "<dl>";
+    $str = "<a href='&action=addBoat&memberId={$value->memberId}'>Add boat</a><dl>";
 
     foreach ($this->boats as $key => $value) {
       $str .= "
