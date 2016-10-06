@@ -44,6 +44,15 @@ class PartialFactory{
 
   private function editBoat(){
     $ip = $this->incomingParams;
+    if($ip->noIncomingParams){
+      return new UpdateBoatForm();
+    }
+
+    $ip = $this->incomingParams;
+    if($ip->noIncomingParams){
+      return new
+    }
+
     $data = $this->db($ip->boatId, $ip->length, $ip->type); // Get data from corresponding model
     return new BoatUpdated();
   }
@@ -58,14 +67,31 @@ class PartialFactory{
     return new MemberDeleted();
   }
 
+  private function addBoat() {
+    $ip = $this->incomingParams;
+    if($ip->noIncomingParams){
+      return new AddBoatForm();
+    }
 
-  private function createNewMember() {
-      $ip = $this->incomingParams;
-      $this->memberModel->setMemberName($ip->firstname);
-      $this->memberModel->setPassportNumber($ip->personalNumber);
+    $this->memberModel->setMemberName($ip->firstname);
+    $this->memberModel->setPassportNumber($ip->personalNumber);
 
     $this->db->createMember($this->memberModel);
 
-    return new CreateMemberForm();
+    return new BoatCreated();
+  }
+
+  private function createNewMember() {
+    $ip = $this->incomingParams;
+    if($ip->noIncomingParams){
+      return new CreateMemberForm();
+    }
+
+    $this->memberModel->setMemberName($ip->firstname);
+    $this->memberModel->setPassportNumber($ip->personalNumber);
+
+    $this->db->createMember($this->memberModel);
+
+    return new MemberCreated();
   }
 }

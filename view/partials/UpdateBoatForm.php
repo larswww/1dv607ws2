@@ -1,16 +1,20 @@
 <?php
 
-class AddBoatForm{
+class UpdateBoat{
 
   private $memberId;
+  private $length;
+  private $type;
 
-  public function __construct($memberId){
+  public function __construct($memberId, $length, $type){
     $this->memberId = $memberId;
+    $this->length = $length;
+    $this->type = $type;
   }
 
   public function show(){
     return "
-    <form action='?action=addBoat' method='POST'>
+    <form action='?action=editBoat' method='POST'>
 
     <input type='hidden' name='memberId' value='{$this->memberId}'>
 
@@ -25,11 +29,11 @@ class AddBoatForm{
       <input type='radio' name='type' value='Other'>
     </legend>
 
-    <legend>Personal identity number
-      <input type='text' name='personalNumber'>
+    <legend>length:
+      <input type='text' name='length'>
     </legend>
 
-    <input type='submit' value='Add boat'>
+    <input type='submit' value='Update boat'>
     ";
   }
 }
