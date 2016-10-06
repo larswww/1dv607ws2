@@ -56,7 +56,6 @@ class registryDatabase {
 
 
     public function createBoat(Boat $boat) {
-        //         $this->connectDatabase();
 
         $uniqueId = uniqid();
 
@@ -66,7 +65,6 @@ class registryDatabase {
             "length" => $boat->getBoatLength(),
             "ID" => $uniqueId
         ));
-
 
     }
 

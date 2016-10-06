@@ -1,8 +1,6 @@
 <?php
 // REQUIRE MODELS
-require_once("model/database.php");
-require_once("model/member.php");
-require_once("model/boat.php");
+
 
 // REQUIRE VIEW
 require_once("view/view.php");

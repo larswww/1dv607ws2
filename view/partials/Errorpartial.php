@@ -1,6 +1,6 @@
 <?php
 
-class Error {
+class Errorpartial {
 
   private $message;
 
@@ -11,7 +11,7 @@ class Error {
   public function show(){
     return "
       Something went wrong:
-      <span class='errormessage'>{$message}</span>
+      <span class='errormessage'> $this->message </span>
     ";
   }
 }

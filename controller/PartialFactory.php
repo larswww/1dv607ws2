@@ -48,7 +48,9 @@ class PartialFactory{
     return new MemberDeleted();
   }
 
-  private function createNewMember() {
+bl  private function createNewMember() {
+
+
     // dbRequest()
     return new CreateMemberForm();
   }
