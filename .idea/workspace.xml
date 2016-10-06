@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2acacf1-a72e-41e9-ba4f-57f373355825" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/IncomingParams.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/PartialFactory.php" afterPath="$PROJECT_DIR$/controller/PartialFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Validate.php" afterPath="$PROJECT_DIR$/model/Validate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/boat.php" afterPath="$PROJECT_DIR$/model/boat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/database.php" afterPath="$PROJECT_DIR$/model/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/Errorpartial.php" afterPath="$PROJECT_DIR$/view/partials/Errorpartial.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/AddBoatForm.php" afterPath="$PROJECT_DIR$/view/partials/AddBoatForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/VerboseList.php" afterPath="$PROJECT_DIR$/view/partials/VerboseList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/ViewMember.php" afterPath="$PROJECT_DIR$/view/partials/ViewMember.php" />
     </list>
     <ignored path="1dv607ws2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Validate.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Validate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Validate.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -81,11 +80,11 @@
             <state relative-caret-position="15">
               <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <marker date="1475775925000" expanded="true" signature="531:696" ph="..." />
-                <marker date="1475775925000" expanded="false" signature="713:719" ph=" " />
-                <marker date="1475775925000" expanded="false" signature="719:725" ph=" " />
-                <marker date="1475775925000" expanded="false" signature="725:731" ph=" " />
-                <marker date="1475775925000" expanded="true" signature="920:1071" ph="..." />
+                <marker date="1475784943000" expanded="true" signature="531:696" ph="..." />
+                <marker date="1475784943000" expanded="false" signature="713:719" ph=" " />
+                <marker date="1475784943000" expanded="false" signature="719:725" ph=" " />
+                <marker date="1475784943000" expanded="false" signature="725:731" ph=" " />
+                <marker date="1475784943000" expanded="true" signature="920:1071" ph="..." />
               </folding>
             </state>
           </provider>
@@ -97,11 +96,11 @@
             <state relative-caret-position="30">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
-                <marker date="1475775925000" expanded="true" signature="358:517" ph="..." />
-                <marker date="1475775925000" expanded="true" signature="728:893" ph="..." />
-                <marker date="1475775925000" expanded="false" signature="910:916" ph=" " />
-                <marker date="1475775925000" expanded="false" signature="916:922" ph=" " />
-                <marker date="1475775925000" expanded="false" signature="922:928" ph=" " />
+                <marker date="1475784943000" expanded="true" signature="358:517" ph="..." />
+                <marker date="1475784943000" expanded="true" signature="726:891" ph="..." />
+                <marker date="1475784943000" expanded="false" signature="908:914" ph=" " />
+                <marker date="1475784943000" expanded="false" signature="914:920" ph=" " />
+                <marker date="1475784943000" expanded="false" signature="920:926" ph=" " />
               </folding>
             </state>
           </provider>
@@ -170,11 +169,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PartialFactory.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PartialFactory.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/PartialFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="258">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -198,9 +197,9 @@
         <option value="$PROJECT_DIR$/model/database.php" />
         <option value="$PROJECT_DIR$/view/partials/Errorpartial.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/controller/PartialFactory.php" />
         <option value="$PROJECT_DIR$/model/Validate.php" />
         <option value="$PROJECT_DIR$/model/boat.php" />
+        <option value="$PROJECT_DIR$/controller/PartialFactory.php" />
       </list>
     </option>
   </component>
@@ -401,12 +400,12 @@
       <updated>1475582547813</updated>
       <workItem from="1475582549113" duration="21331000" />
       <workItem from="1475750257971" duration="1523000" />
-      <workItem from="1475754000678" duration="23236000" />
+      <workItem from="1475754000678" duration="23353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46090000" />
+    <option name="totallyTimeSpent" value="46207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -719,10 +718,10 @@
         <state relative-caret-position="30">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1475775925000" expanded="true" signature="216:779" ph="..." />
-            <marker date="1475775925000" expanded="true" signature="299:366" ph="..." />
-            <marker date="1475775925000" expanded="true" signature="380:625" ph="..." />
-            <marker date="1475775925000" expanded="true" signature="639:725" ph="..." />
+            <marker date="1475784943000" expanded="true" signature="216:781" ph="..." />
+            <marker date="1475784943000" expanded="true" signature="299:366" ph="..." />
+            <marker date="1475784943000" expanded="true" signature="380:546" ph="..." />
+            <marker date="1475784943000" expanded="true" signature="639:725" ph="..." />
           </folding>
         </state>
       </provider>
@@ -808,11 +807,11 @@
         <state relative-caret-position="30">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1475775925000" expanded="true" signature="358:517" ph="..." />
-            <marker date="1475775925000" expanded="true" signature="728:893" ph="..." />
-            <marker date="1475775925000" expanded="false" signature="910:916" ph=" " />
-            <marker date="1475775925000" expanded="false" signature="916:922" ph=" " />
-            <marker date="1475775925000" expanded="false" signature="922:928" ph=" " />
+            <marker date="1475784943000" expanded="true" signature="358:517" ph="..." />
+            <marker date="1475784943000" expanded="true" signature="726:891" ph="..." />
+            <marker date="1475784943000" expanded="false" signature="908:914" ph=" " />
+            <marker date="1475784943000" expanded="false" signature="914:920" ph=" " />
+            <marker date="1475784943000" expanded="false" signature="920:926" ph=" " />
           </folding>
         </state>
       </provider>
@@ -822,11 +821,11 @@
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <marker date="1475775925000" expanded="true" signature="531:696" ph="..." />
-            <marker date="1475775925000" expanded="false" signature="713:719" ph=" " />
-            <marker date="1475775925000" expanded="false" signature="719:725" ph=" " />
-            <marker date="1475775925000" expanded="false" signature="725:731" ph=" " />
-            <marker date="1475775925000" expanded="true" signature="920:1071" ph="..." />
+            <marker date="1475784943000" expanded="true" signature="531:696" ph="..." />
+            <marker date="1475784943000" expanded="false" signature="713:719" ph=" " />
+            <marker date="1475784943000" expanded="false" signature="719:725" ph=" " />
+            <marker date="1475784943000" expanded="false" signature="725:731" ph=" " />
+            <marker date="1475784943000" expanded="true" signature="920:1071" ph="..." />
           </folding>
         </state>
       </provider>
@@ -889,14 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/PartialFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/member.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -917,6 +908,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/PartialFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
