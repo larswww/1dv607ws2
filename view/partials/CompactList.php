@@ -1,6 +1,6 @@
 <?php
 
-abstract class CompactList{
+class CompactList{
 
   private $memberList;
 
@@ -15,7 +15,7 @@ abstract class CompactList{
       $numberOfBoats = $this->numberOfBoats($key['boats']);
 
       $str .= "
-      <div class="listBox">
+      <div class='listBox'>
       name: {$key['firstName']} {$key['lastName']}<br>
       id: {$key['memberId']}<br>
       Number of boats: {$numberOfBoats}

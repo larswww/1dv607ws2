@@ -2,7 +2,7 @@
 
 class AddBoatForm{
 
-  private memberId;
+  private $memberId;
 
   public function __construct($memberId){
     $this->memberId = $memberId;
@@ -10,7 +10,7 @@ class AddBoatForm{
 
   public function show(){
     return "
-    <form action='?action=addBoat' method="POST">
+    <form action='?action=addBoat' method='POST'>
 
     <input type='hidden' name='memberId' value='{$this->memberId}'>
 

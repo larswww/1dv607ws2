@@ -1,16 +1,30 @@
 <?php
-namespace View;
+
+// REQUIRE PARTIALS
+require_once("partials/AddBoatForm.php");
+require_once("partials/Blank.php");
+require_once("partials/BoatDeleted.php");
+require_once("partials/BoatUpdated.php");
+require_once("partials/CompactList.php");
+require_once("partials/CreateMemberForm.php");
+require_once("partials/Errorpartial.php");
+require_once("partials/MemberDeleted.php");
+require_once("partials/CompactList.php");
+require_once("partials/UpdateMemberForm.php");
+require_once("partials/VerboseList.php");
+require_once("partials/ViewMember.php");
 
 class MainLayout {
 
   private $maincontent;
+  private $title = "Välkommen till båtklubben den lila illern";
 
-  public function __construct($mainPartial, array $data){
-    $this->maincontent = (new $mainpartial(...$data))->show();
+  public function __construct($partial){
+    $this->maincontent = $partial->show();
   }
 
   public function render() {
-    $this->maincontent->show();
+
       echo "<!DOCTYPE html>
         <html>
           <head>
@@ -19,8 +33,8 @@ class MainLayout {
           </head>
           <body>
           <nav>
-            <a href='?action=verboseList'>Compact</a>
-            <a href='?action=compactList'>Verbose</a>
+            <a href='?action=verboseList'>Verbose</a>
+            <a href='?action=compactList'>Compact</a>
             <a href='?action=createNewMember'>New member</a>
           </nav>
             <h1>{$this->title}</h1>
@@ -32,29 +46,3 @@ class MainLayout {
       ";
     }
 }
-/*
-arguments:
-  firstname
-  lastname
-  personalnumber
-  memberId
-  boatType
-  boatLength
-
-methods:
-  createMember    firstname, lastname, personalnumber
-  viewMember      memberId, firstname, lastname, personalNumber,
-  updateMember    firstname, lastname, personalnumber
-  deleteMember    id
-  compactList
-  verboselist
-  registerBoat    type, length
-  deleteBoat      id
-  updateBoat      id, type, length
-
-mainPartials:
-  ViewMember($memberId, $firstname, $lastname, $personalNumber, array $boats)
-  UpdateMemberForm($id, $firstname, $lastname, $personalNumber)
-  CreateMemberForm()
-  Error($message)
-*/

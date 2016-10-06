@@ -1,5 +1,4 @@
 <?php
-
 class ViewMember{
 
   private $memberId;
@@ -18,7 +17,6 @@ class ViewMember{
 
   private function boatlist(){
     $str = "<dl>";
-
     foreach ($this->boats as $key => $value) {
       $str .= "
       <dt>Boat {$key}
@@ -29,24 +27,20 @@ class ViewMember{
       <dd>Length: {$value->length}</dd>
       ";
     }
-
     return $str . "</dl>";
   }
 
   public function show(){
     $boatlist = $this->boatlist();
-
     return "
     <div>
       <span>name: {$this->firstname} {$this->lastname}</span>
       <span>Personal number: {$this->personalNumber}</span>
       {$boatlist}
     </div>
-
     <a href='?action=deleteMember&id={$this->memberId}'>Delete member</a>
     <a href='?action=updateMember&id={$this->memberId}'>Update member info</a>
     <a href='?action=addBoat&id={$this->memberId}'>Add a boat</a>
     ";
   }
-
 }
