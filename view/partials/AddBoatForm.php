@@ -21,7 +21,7 @@ class AddBoatForm{
     <legend>Type
       <input type='radio' name='type' value='Sailboat'>
       <input type='radio' name='type' value='Motorsailer'>
-      <input type='radio' name='type' value='kayak/Canoe'>
+      <input type='radio' name='type' value='Kayak/Canoe'>
       <input type='radio' name='type' value='Other'>
     </legend>
 
@@ -29,7 +29,7 @@ class AddBoatForm{
       <input type='text' name='personalNumber'>
     </legend>
 
-    <input type='submit' name='RegisterMember'>
+    <input type='submit' value='Register Member'>
     ";
   }
 }

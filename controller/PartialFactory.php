@@ -1,11 +1,17 @@
 <?php
 
+require_once("IncominParams.php");
+
 class PartialFactory{
 
   private $action;
+  private $db;
+  private $incomingParams;
 
   public function __construct(){
     $this->action = (!empty($_GET) && isset($_GET['action'])) ? $_GET['action'] : 'blank';
+    $this->db = new \model\registryDatabase();
+    $this->incomingParams = new IncomingParams();
   }
 
   public function getRenderedPartial(){
@@ -24,32 +30,34 @@ class PartialFactory{
   }
 
   private function compactList(){
-    $data = array(); // Get data from corresponding model
+    $data = $this->db();
     return new CompactList($data);
   }
 
   private function verboseList(){
-    $data = array(); // Get data from corresponding model
+    $data = $this->db();
     return new VerboseList($data);
   }
 
   private function editBoat(){
-    // dbRequest()
+    $ip = $this->incomingParams;
+    $data = $this->db($ip->boatId, $ip->length, $ip->type); // Get data from corresponding model
     return new BoatUpdated();
   }
 
   private function deleteBoat(){
-    // dbRequest()
+    $this->db($_GET['boatId']);
     return new BoatDeleted();
   }
 
   private function deleteMember(){
-    // dbRequest()
+    $this->db($_GET['memberId'])
     return new MemberDeleted();
   }
 
   private function createNewMember() {
-    // dbRequest()
+    $ip = $this->incomingParams;
+    $this->db($ip->firstname, $ip->lastname, $ip->personalNumber)
     return new CreateMemberForm();
   }
 }
