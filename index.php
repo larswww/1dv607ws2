@@ -8,18 +8,27 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
 $db = new model\registryDatabase();
+
+//test code for creating a boat and member manually
 $member = new model\Member();
-$member->setMemberName("Lars");
-$member->setPassportNumber(343434);
+$member->setMemberName("Skrot Nisse");
+$member->setPassportNumber(1337);
+//
+//$boat = new model\Boat();
+//$boat->setBoatLength(7);
+//$boat->setBoatType("Other");
+//
+//$db->createMember($member);
+//$db->createBoat($boat);
 
-$boat = new model\Boat();
-$boat->setBoatLength(7);
-$boat->setBoatType("Other");
+//$db->registerBoatFor("57f657d392143", "57f6587e291c0"); // memberID, boatID
+//$db->removeBoatFor("57f657d392143", "57f6587e291c0");
 
-$db->createMember($member);
-$db->createBoat($boat);
+//$db->updateMember("57f657b59e13b", $member);
 
-$db->registerBoatFor("57f63bf2ab790", "57f63bf2abbe9");
+//$db->deleteMember("57f657b59e13b");
+
+$db->listMembers();
 
 //$db->getBoat(1);
 //$db->getMember(1);
