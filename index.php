@@ -1,5 +1,8 @@
 <?php
 // REQUIRE MODELS
+require_once('model/database.php');
+require_once('model/Member.php');
+require_once('model/Boat.php');
 
 
 // REQUIRE VIEW
@@ -10,9 +13,11 @@ require_once("controller/PartialFactory.php");
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
+$db = new model\registryDatabase();
+$m = new model\Member();
+$b = new model\Boat();
 
-
-$partial = (new PartialFactory())->getRenderedPartial();
+$partial = (new PartialFactory($db, $m, $b))->getRenderedPartial();
 
 // RENDER HTML
 (new MainLayout($partial))->render();

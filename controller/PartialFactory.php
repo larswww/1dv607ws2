@@ -1,16 +1,19 @@
 <?php
-
-require_once("IncominParams.php");
+require_once("IncomingParams.php");
 
 class PartialFactory{
 
   private $action;
   private $db;
+    private $memberModel;
+    private $boatModel;
   private $incomingParams;
 
-  public function __construct(){
+  public function __construct($database, $member, $boat){
     $this->action = (!empty($_GET) && isset($_GET['action'])) ? $_GET['action'] : 'blank';
-    $this->db = new \model\registryDatabase();
+    $this->db = $database;
+      $this->memberModel = $member;
+      $this->boatModel = $boat;
     $this->incomingParams = new IncomingParams();
   }
 
@@ -51,14 +54,18 @@ class PartialFactory{
   }
 
   private function deleteMember(){
-    $this->db($_GET['memberId'])
+    $this->db($_GET['memberId']);
     return new MemberDeleted();
   }
 
 
   private function createNewMember() {
-    $ip = $this->incomingParams;
-    $this->db($ip->firstname, $ip->lastname, $ip->personalNumber)
+      $ip = $this->incomingParams;
+      $this->memberModel->setMemberName($ip->firstname);
+      $this->memberModel->setPassportNumber($ip->personalNumber);
+
+    $this->db->createMember($this->memberModel);
+
     return new CreateMemberForm();
   }
 }
