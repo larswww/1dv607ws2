@@ -26,7 +26,7 @@ class VerboseList{
   }
 
   private function boatlist(){
-    $str = "<a href='&action=addBoat&memberId={$value->memberId}'>Add boat</a><dl>";
+    $str = "<a href='&action=addBoat&boatId={$value->memberId}'>Add boat</a><dl>";
 
     foreach ($this->boats as $key => $value) {
       $str .= "
