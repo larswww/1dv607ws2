@@ -8,6 +8,8 @@ class ViewMember{
   private $boats;
 
   public function __construct($memberId, $firstname, $lastname, $personalNumber, array $boats = array()){
+    echo "inside ViewMember";
+    return;
     $this->memberId = $memberId;
     $this->firstname = $firstname;
     $this->lastname = $lastname;
