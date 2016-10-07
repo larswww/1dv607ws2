@@ -1,6 +1,6 @@
 <?php
 
-class MemberDeleted {
+class MemberUpdated {
 
   public function show(){
     return "
