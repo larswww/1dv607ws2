@@ -33,12 +33,12 @@ class PartialFactory{
   }
 
   private function compactList(){
-    $data = $this->db();
+    $data = $this->db->listMembers();
     return new CompactList($data);
   }
 
   private function verboseList(){
-    $data = $this->db();
+    $data = $this->db->listMembers();
     return new VerboseList($data);
   }
 
@@ -48,22 +48,20 @@ class PartialFactory{
       return new UpdateBoatForm();
     }
 
-    $ip = $this->incomingParams;
-    if($ip->noIncomingParams){
-      return new
-    }
+    $this->boatModel->setBoatLength($ip->length);
+      $this->boatModel->setBoatType($ip->type);
 
-    $data = $this->db($ip->boatId, $ip->length, $ip->type); // Get data from corresponding model
+    $data = $this->db->updateBoat($ip->boatId, $this->boatModel); // Get data from corresponding model
     return new BoatUpdated();
   }
 
   private function deleteBoat(){
-    $this->db($_GET['boatId']);
+    $this->db->deleteBoat($_GET['boatId']);
     return new BoatDeleted();
   }
 
   private function deleteMember(){
-    $this->db($_GET['memberId']);
+    $this->db->deleteMember($_GET['memberId']);
     return new MemberDeleted();
   }
 
@@ -73,10 +71,10 @@ class PartialFactory{
       return new AddBoatForm();
     }
 
-    $this->memberModel->setMemberName($ip->firstname);
-    $this->memberModel->setPassportNumber($ip->personalNumber);
+    $this->boatModel->setBoatType($ip->length);
+    $this->boatModel->setBoatLength($ip->type);
 
-    $this->db->createMember($this->memberModel);
+    $this->db->createBoat($this->boatModel);
 
     return new BoatCreated();
   }
