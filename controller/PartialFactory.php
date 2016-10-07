@@ -81,10 +81,10 @@ class PartialFactory{
 
   private function viewMember(){
     $ip = $this->incomingParams;
+    $data = $this->db->getMember($_GET['id']);
 
-
-    $member = $this->memberModel->getMember($_GET['id']);
-    print_r($member);
+    //$member = $this->memberModel->getMember();
+    print_r($data);
     // $memberId = "";
     // $firstname = "";
     // $lastname = "";
