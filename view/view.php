@@ -12,6 +12,7 @@ require_once("partials/CreateMemberForm.php");
 require_once("partials/Errorpartial.php");
 require_once("partials/MemberCreated.php");
 require_once("partials/MemberDeleted.php");
+require_once("partials/MemberUpdated.php");
 require_once("partials/UpdateBoatForm.php");
 require_once("partials/UpdateMemberForm.php");
 require_once("partials/VerboseList.php");

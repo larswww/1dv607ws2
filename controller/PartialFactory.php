@@ -93,7 +93,6 @@ class PartialFactory{
   }
 
   private function UpdateMember(){
-    echo $_GET['id'];
     $ip = $this->incomingParams;
     $data = $this->db->getMember($_GET['id']);
 
@@ -111,6 +110,8 @@ class PartialFactory{
     $this->memberModel->setPassportNumber($ip->personalNumber);
 
     $this->db->updateMember($ip->id, $this->memberModel);
+
+    return new MemberUpdated();
   }
 
   private function createNewMember() {
