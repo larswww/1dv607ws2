@@ -5,7 +5,7 @@ class AddBoatForm{
   private $memberId;
 
   public function __construct($memberId){
-    $this->memberId = $memberId;
+    $this->memberId = $_GET['memberId'];
   }
 
   public function show(){
@@ -19,9 +19,9 @@ class AddBoatForm{
     </legend>
 
     <legend>Type
-      <input type='radio' name='type' value='Sailboat'>
-      <input type='radio' name='type' value='Motorsailer'>
-      <input type='radio' name='type' value='Kayak/Canoe'>
+      <input type='radio' name='type' value='Sailboat'>Sailboat<br>
+      <input type='radio' name='type' value='Motorsailer'>Motorsailer<br>
+      <input type='radio' name='type' value='Kayak/Canoe'>Kayak/Canoe<br>
       <input type='radio' name='type' value='Other'>
     </legend>
 
