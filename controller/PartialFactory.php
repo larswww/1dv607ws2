@@ -79,6 +79,23 @@ class PartialFactory{
     return new BoatCreated();
   }
 
+  private function viewMember(){
+    $ip = $this->incomingParams;
+    $data = $this->db->getMember($_GET['id']);
+
+    $memberId = $data['ID'];
+    $firstname = $data['firstName'];
+    $lastname = $data['lastName'];
+    $personalNumber = $data['passportNumber'];
+    $boats = $data['numberOfBoats'];
+
+    return new ViewMember($memberId, $firstname, $lastname, $personalNumber, $boats);
+  }
+
+  private function UpdateMemberForm(){
+    print_r($_GET);
+  }
+
   private function createNewMember() {
     $ip = $this->incomingParams;
     if($ip->noIncomingParams){

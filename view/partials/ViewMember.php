@@ -7,7 +7,8 @@ class ViewMember{
   private $personalNumber;
   private $boats;
 
-  public function __construct($memberId, $firstname, $lastname, $personalNumber, array $boats){
+  public function __construct($memberId, $firstname, $lastname, $personalNumber, $boats){
+  
     $this->memberId = $memberId;
     $this->firstname = $firstname;
     $this->lastname = $lastname;
@@ -16,6 +17,10 @@ class ViewMember{
   }
 
   private function boatlist(){
+    if(!$this->boats){
+      return "No boats";
+    }
+
     $str = "<dl>";
     foreach ($this->boats as $key => $value) {
       $str .= "

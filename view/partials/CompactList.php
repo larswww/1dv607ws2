@@ -13,9 +13,12 @@ class CompactList{
 
       for ($i = 0; $i < count($this->memberList); $i++) {
           $currentMember = $this->memberList[$i];
+          print_r($currentMember);
+          $id = $currentMember['member']['ID'];
           $boatCount = count($currentMember['boats']);
           $str .= "
       <div class='listBox'>
+      <a href='?action=viewMember&id={$id}'>view member info</a>
       name: {$currentMember['member']['firstName']} {$currentMember['member']['lastName']}<br>
       id: {$currentMember['member']['ID']}<br>
       Number of boats: {$boatCount}
@@ -23,18 +26,6 @@ class CompactList{
       ";
 
       }
-
-//    foreach ($this->memberList as $key => $value) {
-//      $numberOfBoats = $this->numberOfBoats($key['boats']);
-//
-//      $str .= "
-//      <div class='listBox'>
-//      name: {$key['firstName']} {$key['lastName']}<br>
-//      id: {$key['memberId']}<br>
-//      Number of boats: {$numberOfBoats}
-//      </div>
-//      ";
-//    }
 
     return $str;
   }
