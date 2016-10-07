@@ -91,7 +91,7 @@ class PartialFactory{
     $personalNumber = $data['passportNumber'];
     $boats = $data['numberOfBoats'];
 
-    return new ViewMember($memberId, $firstname, $lastname, $personalNumber, array $boats);
+    return new ViewMember($memberId, $firstname, $lastname, $personalNumber, $boats);
   }
 
   private function UpdateMemberForm(){
