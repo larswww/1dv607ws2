@@ -13,7 +13,7 @@ class Validate {
 
     }
 
-    static function checkLength($userInput, $minLength, $maxLength) {
+    public function checkLength($userInput, $minLength, $maxLength) {
         if ($userInput > $maxLength) {
             throw new \Exception("Input can be maximum " . $maxLength . "characters.");
         }
@@ -31,7 +31,14 @@ class Validate {
 
     }
 
+    public function sanitizeSQL($input) {
 
+        $sanitizedInput = filter_var($input, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW|FILTER_FLAG_ENCODE_HIGH);
+
+        if ($input !== $sanitizedInput) {
+            throw new \Exception("Input contains invalid characters");
+            }
+    }
 }
 /**
  * Created by PhpStorm.

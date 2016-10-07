@@ -1,5 +1,6 @@
 <?php
 namespace model;
+require_once("Validate.php");
 
 class RegistryDatabase {
 
@@ -48,6 +49,7 @@ class RegistryDatabase {
         )";
 
         $this->config = $dbConfig;
+        $this->validate = new Validate();
         $this->registry = $this->connectDatabase();
         $this->registry->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         $this->registry->exec($memberTable);
@@ -85,6 +87,7 @@ class RegistryDatabase {
 
     //TODO should these be combined into 1?
     public function deleteMember($memberID) {
+        $this->validate->validateID($memberID);
 
         $sql = $this->registry->prepare("DELETE FROM members WHERE ID='$memberID'");
         $sql->execute();
@@ -92,6 +95,7 @@ class RegistryDatabase {
     }
 
     public function deleteBoat($boatID) {
+        $this->validate->validateID($boatID);
 
         $sql = $this->registry->prepare("DELETE FROM boats WHERE ID='$boatID'");
         $sql->execute();
@@ -101,11 +105,14 @@ class RegistryDatabase {
 
     public function updateMember($memberID, Member $newDetails) {
 
-        $newMemberName = $newDetails->getMemberName();
+        $this->validate->validateID($memberID);
+        $newMemberFirstName = $newDetails->getFirstName();
+        $newMemberLastName = $newDetails->getLastName();
         $newPassportNumber = $newDetails->getPassportNumber();
 
-        $updateMemberSchema = $this->registry->prepare("UPDATE members SET memberName = :newMemberName, passportNumber = :newPassportNumber WHERE ID = :memberID");
-        $updateMemberSchema->bindParam(":newMemberName", $newMemberName);
+        $updateMemberSchema = $this->registry->prepare("UPDATE members SET firstName = :newFirstName, lastName = :newLastName, passportNumber = :newPassportNumber WHERE ID = :memberID");
+        $updateMemberSchema->bindParam(":newFirstName", $newMemberFirstName);
+        $updateMemberSchema->bindParam(":newLastName", $newMemberLastName);
         $updateMemberSchema->bindParam(":newPassportNumber", $newPassportNumber);
         $updateMemberSchema->bindParam(":memberID", $memberID);
         $updateMemberSchema->execute();
@@ -137,12 +144,12 @@ class RegistryDatabase {
 
     }
 
-    private function getBoat($id) {
+    public function getBoat($id) {
         return $this->get($id, "boats");
 
     }
 
-    private function getMember($id) {
+    public function getMember($id) {
         return $this->get($id, "members");
     }
 
@@ -210,9 +217,6 @@ class RegistryDatabase {
 
 
     public function listMembers() : array {
-
-        //“Compact List”; name, member id and number of boats
-        //“Verbose List”; name, personal number, member id and boats with boat information
 
         $allMembersQuery = $this->registry->prepare("SELECT passportNumber, firstName, lastName, ID FROM members");
         $allMembersQuery->execute();
