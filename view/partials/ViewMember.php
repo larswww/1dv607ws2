@@ -7,7 +7,7 @@ class ViewMember{
   private $personalNumber;
   private $boats;
 
-  public function __construct($memberId, $firstname, $lastname, $personalNumber, array $boats){
+  public function __construct($memberId, $firstname, $lastname, $personalNumber, array $boats = array()){
     $this->memberId = $memberId;
     $this->firstname = $firstname;
     $this->lastname = $lastname;
