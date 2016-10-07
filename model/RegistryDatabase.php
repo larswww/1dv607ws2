@@ -69,6 +69,8 @@ class RegistryDatabase {
             "ID" => $uniqueId
         ));
 
+        return $uniqueId;
+
     }
 
     public function createMember(Member $member) {
