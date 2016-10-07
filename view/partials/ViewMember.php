@@ -44,7 +44,7 @@ class ViewMember{
       {$boatlist}
     </div>
     <a href='?action=deleteMember&memberId={$this->memberId}'>Delete member</a>
-    <a href='?action=updateMember&memberId={$this->memberId}'>Update member info</a>
+    <a href='?action=updateMember&id={$this->memberId}'>Update member info</a>
     <a href='?action=addBoat&boatId={$this->memberId}'>Add a boat</a>
     ";
   }
