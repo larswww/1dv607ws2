@@ -12,7 +12,6 @@ class UpdateMemberForm{
     $this->firstname = $firstname;
     $this->lastname = $lastname;
     $this->personalNumber = $personalNumber;
-    $this->boats = $boats;
   }
 
   public function show(){

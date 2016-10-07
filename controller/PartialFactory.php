@@ -93,12 +93,11 @@ class PartialFactory{
   }
 
   private function UpdateMember(){
-    echo $_GET['id'];
     $ip = $this->incomingParams;
-    $data = $this->db->getMember($_GET['id']);
+    $data = $this->db->getMember($ip->id);
 
     if($ip->noIncomingParams){
-      $memberId = $data['ID'];
+      $memberId = $ip->id;
       $firstname = $data['firstName'];
       $lastname = $data['lastName'];
       $personalNumber = $data['passportNumber'];
