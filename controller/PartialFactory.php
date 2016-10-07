@@ -93,6 +93,7 @@ class PartialFactory{
   }
 
   private function UpdateMember(){
+    echo $_GET['id'];
     $ip = $this->incomingParams;
     $data = $this->db->getMember($_GET['id']);
 
