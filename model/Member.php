@@ -3,7 +3,8 @@ namespace model;
 
 class Member {
 
-    private $name;
+    private $firstname;
+    private $lastname;
 
     // "personal number" is a bad translation of Personnummer in req's, which in some countries would be Social Security Number.
     // a personal number can be anything, a social security number follows a certain format and contains numbers/letters
@@ -13,11 +14,11 @@ class Member {
     private $memberID;
 
     public function getMemberName() {
-        return $this->name;
+        return $this->firstname . $this->lastname;
     }
 
-    public function setMemberName($name) {
-        $this->name = $name;
+    public function setMemberName($firstname, $lastname) {
+        $this->firstname = $firstname;
     }
 
     public function getPassportNumber() {

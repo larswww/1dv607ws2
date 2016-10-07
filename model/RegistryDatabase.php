@@ -1,7 +1,7 @@
 <?php
 namespace model;
 
-class registryDatabase {
+class RegistryDatabase {
 
     //TODO
         // refactor functions to increase abstraction level
@@ -219,12 +219,6 @@ class registryDatabase {
         $allBoatsQuery = $this->registry->prepare("SELECT type, length, ID, ownerID FROM boats");
         $allBoatsQuery->execute();
         $allBoatsQuery = $allBoatsQuery->fetchAll();
-
-        //[
-//name: name,
-//id: id,
-//etc....
-//boats : array []
 
         $membersAndBoats = Array();
 
