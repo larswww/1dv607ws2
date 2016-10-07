@@ -83,8 +83,6 @@ class PartialFactory{
     $ip = $this->incomingParams;
     $data = $this->db->getMember($_GET['id']);
 
-    //$member = $this->memberModel->getMember();
-    print_r($data);
     $memberId = $data['ID'];
     $firstname = $data['firstName'];
     $lastname = $data['lastName'];
