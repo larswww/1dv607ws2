@@ -17,7 +17,7 @@ class UpdateMemberForm{
 
   public function show(){
     return "
-    <form action='?action=updateMember' method='POST'>
+    <form action='?action=updateMember&id={$this->id}' method='POST'>
 
     <legend>First name
       <input type='text' name='firstname' value='{$this->firstname}'>
