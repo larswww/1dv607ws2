@@ -103,7 +103,7 @@ class PartialFactory{
       $personalNumber = $data['passportNumber'];
       $boats = $data['numberOfBoats'];
 
-      return new ViewMember($memberId, $firstname, $lastname, $personalNumber, $boats);
+      return new UpdateMemberForm($memberId, $firstname, $lastname, $personalNumber, $boats);
     }
 
     $this->memberModel->setMemberName($ip->firstname, $ip->lastname);

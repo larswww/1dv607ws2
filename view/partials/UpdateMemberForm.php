@@ -28,7 +28,7 @@ class UpdateMemberForm{
     </legend>
 
     <legend>Personal identity number
-      <input type='text' name='personalNumber' value='{$this->$personalNumber}'>
+      <input type='text' name='personalNumber' value='{$this->personalNumber}'>
     </legend>
 
     <input type='submit' name='UpdateMember'>
