@@ -142,7 +142,7 @@ class RegistryDatabase {
 
     }
 
-    private function getMember($id) {
+    public function getMember($id) {
         return $this->get($id, "members");
     }
 
