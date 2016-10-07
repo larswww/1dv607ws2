@@ -19,7 +19,7 @@ class UpdateMemberForm{
     return "
     <form action='?action=updateMember&id={$this->id}' method='POST'>
 
-    <input type="hidden" name="id" value={$this->id}>
+    <input type='hidden' name='id' value={$this->id}>
 
     <legend>First name
       <input type='text' name='firstname' value='{$this->firstname}'>
