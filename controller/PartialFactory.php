@@ -110,6 +110,8 @@ class PartialFactory{
     $this->memberModel->setPassportNumber($ip->personalNumber);
 
     $this->db->updateMember($ip->id, $this->memberModel);
+
+    return new MemberUpdated();
   }
 
   private function createNewMember() {
