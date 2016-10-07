@@ -92,7 +92,7 @@ class PartialFactory{
     return new ViewMember($memberId, $firstname, $lastname, $personalNumber, $boats);
   }
 
-  private function UpdateMemberForm(){
+  private function UpdateMember(){
     print_r($_GET);
   }
 
