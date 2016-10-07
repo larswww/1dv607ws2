@@ -8,8 +8,7 @@ class ViewMember{
   private $boats;
 
   public function __construct($memberId, $firstname, $lastname, $personalNumber, $boats){
-    echo "inside ViewMember";
-    return;
+  
     $this->memberId = $memberId;
     $this->firstname = $firstname;
     $this->lastname = $lastname;
@@ -21,7 +20,7 @@ class ViewMember{
     if(!$this->boats){
       return "No boats";
     }
-    
+
     $str = "<dl>";
     foreach ($this->boats as $key => $value) {
       $str .= "
