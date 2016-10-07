@@ -13,11 +13,11 @@ class CompactList{
 
       for ($i = 0; $i < count($this->memberList); $i++) {
           $currentMember = $this->memberList[$i];
-          $id = $currentMember['ID']
+          //$id = "THISID"; $currentMember['ID']
           $boatCount = count($currentMember['boats']);
           $str .= "
       <div class='listBox'>
-      <a href=?action=viewMember&id=$id>view member info</a>
+      <a href='?action=viewMember&id={$id}'>view member info</a>
       name: {$currentMember['member']['firstName']} {$currentMember['member']['lastName']}<br>
       id: {$currentMember['member']['ID']}<br>
       Number of boats: {$boatCount}
