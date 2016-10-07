@@ -92,8 +92,25 @@ class PartialFactory{
     return new ViewMember($memberId, $firstname, $lastname, $personalNumber, $boats);
   }
 
-  private function UpdateMemberForm(){
-    print_r($_GET);
+  private function UpdateMember(){
+    echo $_GET['id'];
+    $ip = $this->incomingParams;
+    $data = $this->db->getMember($_GET['id']);
+
+    if($ip->noIncomingParams){
+      $memberId = $data['ID'];
+      $firstname = $data['firstName'];
+      $lastname = $data['lastName'];
+      $personalNumber = $data['passportNumber'];
+      $boats = $data['numberOfBoats'];
+
+      return new UpdateMemberForm($memberId, $firstname, $lastname, $personalNumber, $boats);
+    }
+
+    $this->memberModel->setMemberName($ip->firstname, $ip->lastname);
+    $this->memberModel->setPassportNumber($ip->personalNumber);
+
+    $this->db->updateMember($ip->id, $this->memberModel);
   }
 
   private function createNewMember() {

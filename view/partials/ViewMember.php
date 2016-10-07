@@ -8,7 +8,7 @@ class ViewMember{
   private $boats;
 
   public function __construct($memberId, $firstname, $lastname, $personalNumber, $boats){
-  
+
     $this->memberId = $memberId;
     $this->firstname = $firstname;
     $this->lastname = $lastname;
@@ -44,8 +44,8 @@ class ViewMember{
       {$boatlist}
     </div>
     <a href='?action=deleteMember&memberId={$this->memberId}'>Delete member</a>
-    <a href='?action=updateMember&memberIdd={$this->memberId}'>Update member info</a>
-    <a href='?action=addBoat&boatId={$this->memberId}'>Add a boat</a>
+    <a href='?action=updateMember&id={$this->memberId}'>Update member info</a>
+    <a href='?action=addBoat&boatId={$this->boatId}'>Add a boat</a>
     ";
   }
 }

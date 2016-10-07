@@ -17,7 +17,9 @@ class UpdateMemberForm{
 
   public function show(){
     return "
-    <form action='?action=updateMember' method='POST'>
+    <form action='?action=updateMember&id={$this->id}' method='POST'>
+
+    <input type="hidden" name="id" value={$this->id}>
 
     <legend>First name
       <input type='text' name='firstname' value='{$this->firstname}'>
@@ -28,7 +30,7 @@ class UpdateMemberForm{
     </legend>
 
     <legend>Personal identity number
-      <input type='text' name='personalNumber' value='{$this->$personalNumber}'>
+      <input type='text' name='personalNumber' value='{$this->personalNumber}'>
     </legend>
 
     <input type='submit' name='UpdateMember'>
