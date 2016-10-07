@@ -90,8 +90,8 @@ class PartialFactory{
     $lastname = $data['lastName'];
     $personalNumber = $data['passportNumber'];
     $boats = $data['numberOfBoats'];
-//return new CreateMemberForm();
-    return new ViewMember($memberId, $firstname, $lastname, $personalNumber, array $boats);
+return new CreateMemberForm();
+//    return new ViewMember($memberId, $firstname, $lastname, $personalNumber, array $boats);
   }
 
   private function UpdateMemberForm(){
