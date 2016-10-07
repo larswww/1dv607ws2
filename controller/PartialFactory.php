@@ -79,6 +79,10 @@ class PartialFactory{
     return new BoatCreated();
   }
 
+  private function UpdateMemberForm(){
+    print_r($_GET);
+  }
+
   private function createNewMember() {
     $ip = $this->incomingParams;
     if($ip->noIncomingParams){
