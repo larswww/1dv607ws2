@@ -215,16 +215,42 @@ class RegistryDatabase {
 
     }
 
+    public function getAllBoatsOwnedBy($memberID) {
 
-    public function listMembers() : array {
+        $this->validate->validateID($memberID);
+
+        $boatOwnerQuery = $this->registry->prepare("SELECT * FROM boats WHERE ownerID = '$memberID'");
+        $boatOwnerQuery->execute();
+        $boatOwnerQuery = $boatOwnerQuery->fetchAll();
+
+        return $boatOwnerQuery;
+
+    }
+
+    public function getAllBoats() : array {
+
+        $allBoatsQuery = $this->registry->prepare("SELECT type, length, ID, ownerID FROM boats");
+        $allBoatsQuery->execute();
+        $allBoatsQuery = $allBoatsQuery->fetchAll();
+
+        return $allBoatsQuery;
+    }
+
+    public function getAllMembers() : array {
 
         $allMembersQuery = $this->registry->prepare("SELECT passportNumber, firstName, lastName, ID FROM members");
         $allMembersQuery->execute();
         $allMembersQuery = $allMembersQuery->fetchAll();
 
-        $allBoatsQuery = $this->registry->prepare("SELECT type, length, ID, ownerID FROM boats");
-        $allBoatsQuery->execute();
-        $allBoatsQuery = $allBoatsQuery->fetchAll();
+        return $allMembersQuery;
+
+    }
+
+    public function listMembers() : array {
+
+        $allMembersQuery = $this->getAllMembers();
+
+        $allBoatsQuery = $this->getAllBoats();
 
         $membersAndBoats = Array();
 

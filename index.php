@@ -31,7 +31,23 @@ $partial = (new PartialFactory($db, $m, $b))->getRenderedPartial();
 // $boat = new model\Boat();
 // $boat->setBoatLength(7);
 // $boat->setBoatType("Other");
+//$db->createBoat($boat);
 //
+//
+//$boat = new model\Boat();
+//$boat->setBoatLength(12);
+//$boat->setBoatType("Motorsailer");
+//$db->createBoat($boat);
+//
+//
+//$boat = new model\Boat();
+//$boat->setBoatLength(5);
+//$boat->setBoatType("kayak/Canoe");
+//$db->createBoat($boat);
+
+
+
+
 // $db->createMember($member);
 // $db->createBoat($boat);
 //

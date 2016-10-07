@@ -8,7 +8,7 @@ class Validate {
         $sanitizedInput = htmlentities($userInput, ENT_QUOTES | ENT_IGNORE, "UTF-8");
 
         if ($sanitizedInput !== $userInput) {
-            throw new \Exception("Entry contains forbidden script characters, you h4x0r.");
+            throw new \Exception("Entry contains forbidden script characters, or maybe some åäö etc.");
         }
 
     }
