@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2acacf1-a72e-41e9-ba4f-57f373355825" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/PartialFactory.php" afterPath="$PROJECT_DIR$/controller/PartialFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Member.php" afterPath="$PROJECT_DIR$/model/Member.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/RegistryDatabase.php" afterPath="$PROJECT_DIR$/model/RegistryDatabase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/CreateMemberForm.php" afterPath="$PROJECT_DIR$/view/partials/CreateMemberForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/CompactList.php" afterPath="$PROJECT_DIR$/view/partials/CompactList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/VerboseList.php" afterPath="$PROJECT_DIR$/view/partials/VerboseList.php" />
     </list>
     <ignored path="1dv607ws2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,16 +85,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompactList.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CompactList.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/partials/CompactList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-164">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
               <folding>
-                <marker date="1475821779000" expanded="true" signature="388:402" ph="..." />
-                <marker date="1475821779000" expanded="true" signature="388:517" ph="..." />
-                <marker date="1475821779000" expanded="true" signature="388:541" ph="..." />
-                <marker date="1475821779000" expanded="true" signature="727:876" ph="..." />
+                <marker date="1475824770000" expanded="true" signature="388:402" ph="..." />
+                <marker date="1475824770000" expanded="true" signature="388:555" ph="..." />
+                <marker date="1475824770000" expanded="true" signature="388:579" ph="..." />
+                <marker date="1475824770000" expanded="true" signature="765:914" ph="..." />
               </folding>
             </state>
           </provider>
@@ -105,28 +103,31 @@
       <file leaf-file-name="VerboseList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/partials/VerboseList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+            <state relative-caret-position="225">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
-                <marker date="1475823150000" expanded="true" signature="755:968" ph="..." />
-                <marker date="1475823150000" expanded="true" signature="1142:1311" ph="..." />
-                <marker date="1475823150000" expanded="true" signature="1714:1720" ph=" " />
-                <marker date="1475823150000" expanded="true" signature="1720:1726" ph=" " />
-                <marker date="1475823150000" expanded="true" signature="1726:1732" ph=" " />
-                <marker date="1475823150000" expanded="true" signature="2102:2273" ph="..." />
-                <marker date="1475823150000" expanded="false" signature="2292:2298" ph=" " />
-                <marker date="1475823150000" expanded="false" signature="2298:2304" ph=" " />
-                <marker date="1475823150000" expanded="false" signature="2304:2310" ph=" " />
+                <marker date="1475824730000" expanded="true" signature="755:769" ph="..." />
+                <marker date="1475824730000" expanded="true" signature="755:809" ph="..." />
+                <marker date="1475824730000" expanded="true" signature="755:1006" ph="..." />
+                <marker date="1475824730000" expanded="true" signature="1180:1349" ph="..." />
+                <marker date="1475824730000" expanded="true" signature="1752:1758" ph=" " />
+                <marker date="1475824730000" expanded="true" signature="1758:1764" ph=" " />
+                <marker date="1475824730000" expanded="true" signature="1764:1770" ph=" " />
+                <marker date="1475824730000" expanded="true" signature="2140:2171" ph="..." />
+                <marker date="1475824730000" expanded="true" signature="2140:2311" ph="..." />
+                <marker date="1475824730000" expanded="false" signature="2330:2336" ph=" " />
+                <marker date="1475824730000" expanded="false" signature="2336:2342" ph=" " />
+                <marker date="1475824730000" expanded="false" signature="2342:2348" ph=" " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistryDatabase.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegistryDatabase.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/RegistryDatabase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-104">
-              <caret line="204" column="24" selection-start-line="204" selection-start-column="24" selection-end-line="204" selection-end-column="24" />
+            <state relative-caret-position="121">
+              <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
               <folding>
                 <marker date="1475824348000" expanded="true" signature="975:1227" ph="CREATE TABLE... IF" />
                 <marker date="1475824348000" expanded="true" signature="1253:1476" ph="CREATE TABLE... IF" />
@@ -206,13 +207,13 @@
         <option value="$PROJECT_DIR$/model/member.php" />
         <option value="$PROJECT_DIR$/model/database.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/view/partials/CompactList.php" />
-        <option value="$PROJECT_DIR$/view/partials/VerboseList.php" />
         <option value="$PROJECT_DIR$/model/Database.php" />
         <option value="$PROJECT_DIR$/model/Member.php" />
         <option value="$PROJECT_DIR$/controller/PartialFactory.php" />
         <option value="$PROJECT_DIR$/view/partials/CreateMemberForm.php" />
         <option value="$PROJECT_DIR$/model/RegistryDatabase.php" />
+        <option value="$PROJECT_DIR$/view/partials/VerboseList.php" />
+        <option value="$PROJECT_DIR$/view/partials/CompactList.php" />
       </list>
     </option>
   </component>
@@ -399,12 +400,12 @@
       <updated>1475582547813</updated>
       <workItem from="1475582549113" duration="21331000" />
       <workItem from="1475750257971" duration="1523000" />
-      <workItem from="1475754000678" duration="34250000" />
+      <workItem from="1475754000678" duration="34600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57104000" />
+    <option name="totallyTimeSpent" value="57454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1916" height="1057" extended-state="6" />
@@ -927,37 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/partials/CompactList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-164">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <marker date="1475821779000" expanded="true" signature="388:402" ph="..." />
-            <marker date="1475821779000" expanded="true" signature="388:517" ph="..." />
-            <marker date="1475821779000" expanded="true" signature="388:541" ph="..." />
-            <marker date="1475821779000" expanded="true" signature="727:876" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/partials/VerboseList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-          <folding>
-            <marker date="1475823150000" expanded="true" signature="755:968" ph="..." />
-            <marker date="1475823150000" expanded="true" signature="1142:1311" ph="..." />
-            <marker date="1475823150000" expanded="true" signature="1714:1720" ph=" " />
-            <marker date="1475823150000" expanded="true" signature="1720:1726" ph=" " />
-            <marker date="1475823150000" expanded="true" signature="1726:1732" ph=" " />
-            <marker date="1475823150000" expanded="true" signature="2102:2273" ph="..." />
-            <marker date="1475823150000" expanded="false" signature="2292:2298" ph=" " />
-            <marker date="1475823150000" expanded="false" signature="2298:2304" ph=" " />
-            <marker date="1475823150000" expanded="false" signature="2304:2310" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/Member.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -997,8 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/RegistryDatabase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="204" column="24" selection-start-line="204" selection-start-column="24" selection-end-line="204" selection-end-column="24" />
+        <state relative-caret-position="121">
+          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
           <folding>
             <marker date="1475824348000" expanded="true" signature="975:1227" ph="CREATE TABLE... IF" />
             <marker date="1475824348000" expanded="true" signature="1253:1476" ph="CREATE TABLE... IF" />
@@ -1027,6 +997,40 @@
             <marker date="1475824348000" expanded="true" signature="6275:6330" ph="UPDATE boats... " />
             <marker date="1475824348000" expanded="true" signature="7249:7308" ph="SELECT COUNT... members" />
             <marker date="1475824348000" expanded="true" signature="7458:7501" ph="SELECT type,... boats" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/partials/VerboseList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1475824730000" expanded="true" signature="755:769" ph="..." />
+            <marker date="1475824730000" expanded="true" signature="755:809" ph="..." />
+            <marker date="1475824730000" expanded="true" signature="755:1006" ph="..." />
+            <marker date="1475824730000" expanded="true" signature="1180:1349" ph="..." />
+            <marker date="1475824730000" expanded="true" signature="1752:1758" ph=" " />
+            <marker date="1475824730000" expanded="true" signature="1758:1764" ph=" " />
+            <marker date="1475824730000" expanded="true" signature="1764:1770" ph=" " />
+            <marker date="1475824730000" expanded="true" signature="2140:2171" ph="..." />
+            <marker date="1475824730000" expanded="true" signature="2140:2311" ph="..." />
+            <marker date="1475824730000" expanded="false" signature="2330:2336" ph=" " />
+            <marker date="1475824730000" expanded="false" signature="2336:2342" ph=" " />
+            <marker date="1475824730000" expanded="false" signature="2342:2348" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/partials/CompactList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <marker date="1475824770000" expanded="true" signature="388:402" ph="..." />
+            <marker date="1475824770000" expanded="true" signature="388:555" ph="..." />
+            <marker date="1475824770000" expanded="true" signature="388:579" ph="..." />
+            <marker date="1475824770000" expanded="true" signature="765:914" ph="..." />
           </folding>
         </state>
       </provider>

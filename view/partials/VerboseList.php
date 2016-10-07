@@ -31,7 +31,7 @@ class VerboseList{
 
           $str .= "
       <div class='listBox'>
-      name: {$currentMember['member']['memberName']}<br>
+      name: {$currentMember['member']['firstName']} {$currentMember['member']['lastName']}<br>
       personal id: {$currentMember['member']['passportNumber']}<br>
       id: {$currentMember['member']['ID']}
 

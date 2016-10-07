@@ -16,7 +16,7 @@ class CompactList{
           $boatCount = count($currentMember['boats']);
           $str .= "
       <div class='listBox'>
-      name: {$currentMember['member']['memberName']}<br>
+      name: {$currentMember['member']['firstName']} {$currentMember['member']['lastName']}<br>
       id: {$currentMember['member']['ID']}<br>
       Number of boats: {$boatCount}
       </div>
