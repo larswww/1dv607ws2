@@ -90,7 +90,7 @@ class PartialFactory{
     $lastname = "";
     $personalNumber = "";
     $boats = array();
-
+return new CreateMemberForm();
     return new ViewMember($memberId, $firstname, $lastname, $personalNumber, array $boats);
   }
 
