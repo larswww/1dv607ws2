@@ -85,13 +85,13 @@ class PartialFactory{
 
     //$member = $this->memberModel->getMember();
     print_r($data);
-    // $memberId = "";
-    // $firstname = "";
-    // $lastname = "";
-    // $personalNumber = "";
-    // $boats = array();
-    //
-    // return new ViewMember($memberId, $firstname, $lastname, $personalNumber, array $boats);
+    $memberId = "";
+    $firstname = "";
+    $lastname = "";
+    $personalNumber = "";
+    $boats = array();
+
+    return new ViewMember($memberId, $firstname, $lastname, $personalNumber, array $boats);
   }
 
   private function UpdateMemberForm(){

@@ -23,7 +23,6 @@ class MainLayout {
   private $title = "Välkommen till båtklubben den lila illern";
 
   public function __construct($partial){
-    echo "partial is:" . $partial;
     $this->maincontent = $partial->show();
   }
 
