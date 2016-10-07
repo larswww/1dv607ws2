@@ -74,7 +74,8 @@ class PartialFactory{
     $this->boatModel->setBoatType($ip->length);
     $this->boatModel->setBoatLength($ip->type);
 
-    $this->db->createBoat($this->boatModel);
+    $boatId = $this->db->createBoat($this->boatModel);
+    $this->db->registerBoatFor($ip->memberId, $boatId);
 
     return new BoatCreated();
   }
