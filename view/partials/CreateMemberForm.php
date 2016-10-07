@@ -4,7 +4,7 @@ class CreateMemberForm{
 
   public function show(){
     return "
-    <form action='?action=registerMember' method='POST'>
+    <form action='?action=createNewMember' method='POST'>
 
     <legend>First name
       <input type='text' name='firstname'>

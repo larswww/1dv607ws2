@@ -85,7 +85,7 @@ class PartialFactory{
       return new CreateMemberForm();
     }
 
-    $this->memberModel->setMemberName($ip->firstname);
+    $this->memberModel->setMemberName($ip->firstname, $ip->lastname);
     $this->memberModel->setPassportNumber($ip->personalNumber);
 
     $this->db->createMember($this->memberModel);

@@ -13,12 +13,17 @@ class Member {
     private $passportNumber;
     private $memberID;
 
-    public function getMemberName() {
-        return $this->firstname . $this->lastname;
+    public function getFirstName() {
+        return $this->firstname;
+    }
+
+    public function getLastName() {
+        return $this->lastname;
     }
 
     public function setMemberName($firstname, $lastname) {
         $this->firstname = $firstname;
+        $this->lastname = $lastname;
     }
 
     public function getPassportNumber() {

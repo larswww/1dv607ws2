@@ -32,7 +32,8 @@ class RegistryDatabase {
         ];
 
         $memberTable = "CREATE TABLE IF NOT EXISTS members (
-            memberName VARCHAR(30) NOT NULL,
+            firstName VARCHAR(30) NOT NULL,
+            lastName VARCHAR(30) NOT NULL,
             passportNumber VARCHAR(30) NOT NULL,
             ID VARCHAR(13) NOT NULL,
             numberOfBoats INT(2)
@@ -72,9 +73,10 @@ class RegistryDatabase {
         //         $this->connectDatabase();
         $uniqueId = uniqid();
 
-        $memberSchema = $this->registry->prepare("INSERT INTO members (memberName, passportNumber, ID)" . "VALUES (:memberName, :passportNumber, :ID)");
+        $memberSchema = $this->registry->prepare("INSERT INTO members (firstName, lastName, passportNumber, ID)" . "VALUES (:firstName, :lastName, :passportNumber, :ID)");
         $memberSchema->execute(array(
-            "memberName" => $member->getMemberName(),
+            "firstName" => $member->getFirstName(),
+            "lastName" => $member->getLastName(),
             "passportNumber" => $member->getPassportNumber(),
             "ID" => $uniqueId
         ));
@@ -212,7 +214,7 @@ class RegistryDatabase {
         //“Compact List”; name, member id and number of boats
         //“Verbose List”; name, personal number, member id and boats with boat information
 
-        $allMembersQuery = $this->registry->prepare("SELECT passportNumber, memberName, ID FROM members");
+        $allMembersQuery = $this->registry->prepare("SELECT passportNumber, firstName, lastName, ID FROM members");
         $allMembersQuery->execute();
         $allMembersQuery = $allMembersQuery->fetchAll();
 
