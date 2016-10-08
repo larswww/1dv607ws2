@@ -38,8 +38,8 @@ class VerboseList{
 
           foreach ($member['boats'] as $key => $value) {
               $str .= "
-              (<a href='&action=editBoat&boatId={$value['ID']}'>edit</a>
-                 <a href='&action=deleteBoat&boatId={$value['ID']}'>Delete</a>)
+              (<a href='?action=editBoat&boatId={$value['ID']}'>edit</a>
+                 <a href='?action=deleteBoat&boatId={$value['ID']}'>Delete</a>)
       </dt>
       <dd>Type:&nbsp;&nbsp;&nbsp;{$value['type']}</dd>
       <dd>Length: {$value['length']}</dd>

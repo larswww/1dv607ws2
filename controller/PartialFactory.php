@@ -46,11 +46,12 @@ class PartialFactory{
   private function editBoat(){
     $ip = $this->incomingParams;
     if($ip->noIncomingParams){
-      return new UpdateBoatForm();
+      // TODO: get length and type and id from $_GET['boatId'] (or just id?)
+      return new UpdateBoatForm($id, $length, $type);
     }
 
     $this->boatModel->setBoatLength($ip->length);
-      $this->boatModel->setBoatType($ip->type);
+    $this->boatModel->setBoatType($ip->type);
 
     $data = $this->db->updateBoat($ip->boatId, $this->boatModel); // Get data from corresponding model
     return new BoatUpdated();
@@ -83,29 +84,16 @@ class PartialFactory{
 
   private function viewMember(){
     $ip = $this->incomingParams;
-    $data = $this->db->getMember($_GET['id']);
-
-    $memberId = $data['ID'];
-    $firstname = $data['firstName'];
-    $lastname = $data['lastName'];
-    $personalNumber = $data['passportNumber'];
-    $boats = $data['numberOfBoats'];
-
-    return new ViewMember($memberId, $firstname, $lastname, $personalNumber, $boats);
+    $m = $this->db->getMember($_GET['id']);
+    return new ViewMember($m['ID'], $m['firstName'], $m['lastName'], $m['passportNumber'], $m['numberOfBoats']);
   }
 
   private function UpdateMember(){
     $ip = $this->incomingParams;
-    $data = $this->db->getMember($_GET['id']);
+    $m = $this->db->getMember($_GET['id']);
 
     if($ip->noIncomingParams){
-      $memberId = $data['ID'];
-      $firstname = $data['firstName'];
-      $lastname = $data['lastName'];
-      $personalNumber = $data['passportNumber'];
-      $boats = $data['numberOfBoats'];
-
-      return new UpdateMemberForm($memberId, $firstname, $lastname, $personalNumber, $boats);
+      return new UpdateMemberForm($m['ID'], $m['firstName'], $m['lastName'], $m['passportNumber'], $m['numberOfBoats']);
     }
 
     $this->memberModel->setMemberName($ip->firstname, $ip->lastname);
