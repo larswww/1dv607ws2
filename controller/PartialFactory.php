@@ -5,15 +5,15 @@ class PartialFactory{
 
   private $action;
   private $db;
-    private $memberModel;
-    private $boatModel;
+  private $memberModel;
+  private $boatModel;
   private $incomingParams;
 
   public function __construct($database, $member, $boat){
     $this->action = (!empty($_GET) && isset($_GET['action'])) ? $_GET['action'] : 'blank';
     $this->db = $database;
-      $this->memberModel = $member;
-      $this->boatModel = $boat;
+    $this->memberModel = $member;
+    $this->boatModel = $boat;
     $this->incomingParams = new IncomingParams();
   }
 
@@ -39,6 +39,7 @@ class PartialFactory{
 
   private function verboseList(){
     $data = $this->db->listMembers();
+    print_r($data);
     return new VerboseList($data);
   }
 
