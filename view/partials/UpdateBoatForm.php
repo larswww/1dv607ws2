@@ -24,7 +24,7 @@ class UpdateBoatForm{
 
     <legend>Type
       <label><input type='radio' name='type' value='Sailboat'>Sailboat</label>
-      <label>input type='radio' name='type' value='Motorsailer'>Motorsailer</label>
+      <label><input type='radio' name='type' value='Motorsailer'>Motorsailer</label>
       <label><input type='radio' name='type' value='Kayak/Canoe'>Kayak/Canoe</label>
       <label><input type='radio' name='type' value='Other'>Other</label>
     </legend>

@@ -48,10 +48,6 @@ class PartialFactory{
 
     if($ip->noIncomingParams){
       $boat = $this->db->getBoat($id);
-
-      print_r($boat);
-
-      // If app crashes on upload here might be a good place to start bughunting
       return new UpdateBoatForm($boat['ID'], $boat['length'], $boat['type']);
     }
 
