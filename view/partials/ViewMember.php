@@ -46,7 +46,7 @@ class ViewMember{
   }
 
   public function show(){
-    //$boatlist = $this->boatlist();
+    $boatlist = $this->boatlist();
     return "
     <div>
       <span>name: {$this->firstname} {$this->lastname}</span>
