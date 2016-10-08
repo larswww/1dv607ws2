@@ -34,8 +34,8 @@ class ViewMember{
 
       $str .= "
       <dt>Boat {$i}:<br>
-        <a href='&action=editBoat&boatId={$id}'>edit</a><br>
-        <a href='&action=deleteBoat&boatId={$id}'>Delete</a>
+        <a href='?action=editBoat&boatId={$id}'>edit</a><br>
+        <a href='?action=deleteBoat&boatId={$id}'>Delete</a>
       </dt>
       <dd>Type:&nbsp;&nbsp;&nbsp;{$type}</dd>
       <dd>Length: {$length}</dd>
