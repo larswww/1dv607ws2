@@ -17,6 +17,8 @@ class ViewMember{
   }
 
   private function boatlist(){
+    var_dump($this->boats);
+
     if(!$this->boats){
       return "No boats";
     }

@@ -29,8 +29,4 @@ class CompactList{
 
     return $str;
   }
-
-  private function numberOfBoats($boats){
-    return count($boats);
-  }
 }
