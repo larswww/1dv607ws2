@@ -73,6 +73,8 @@ class PartialFactory{
       return new AddBoatForm();
     }
 
+    echo $ip->length;
+    echo $ip->type;
     $this->boatModel->setBoatType($ip->length);
     $this->boatModel->setBoatLength($ip->type);
 

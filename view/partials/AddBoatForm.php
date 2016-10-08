@@ -18,13 +18,12 @@ class AddBoatForm{
       <input type='text' name='length' size=3>
     </legend>
 
-    <legend>Boat Type<br>
-      <input type='radio' name='type' value='Sailboat'>Sailboat<br>
-      <input type='radio' name='type' value='Motorsailer'>Motorsailer<br>
-      <input type='radio' name='type' value='Kayak/Canoe'>Kayak/Canoe<br>
-      <input type='radio' name='type' value='Other'>Other
-    </legend>
-
+    Boat Type<br>
+      <legend><input type='radio' name='type' value='Sailboat'>Sailboat</legend><br>
+      <legend><input type='radio' name='type' value='Motorsailer'>Motorsailer</legend><br>
+      <legend><input type='radio' name='type' value='Kayak/Canoe'>Kayak/Canoe</legend><br>
+      <legend><input type='radio' name='type' value='Other'>Other</legend>
+    
     <input type='submit' value='Add boat'>
     ";
   }
