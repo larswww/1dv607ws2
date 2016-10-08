@@ -10,7 +10,7 @@ class PartialFactory{
   private $incomingParams;
 
   public function __construct($database, $member, $boat){
-    $this->action = (!empty($_GET) && isset($_GET['action'])) ? $_GET['action'] : 'blank';
+    $this->action = (!empty($_GET) && isset($_GET['action']) && function_exists($_GET['action'])) ? $_GET['action'] : 'blank';
     $this->db = $database;
     $this->memberModel = $member;
     $this->boatModel = $boat;
