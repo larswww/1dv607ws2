@@ -74,8 +74,8 @@ class PartialFactory{
       return new AddBoatForm();
     }
 
-    $this->boatModel->setBoatType($ip->length);
-    $this->boatModel->setBoatLength($ip->type);
+    $this->boatModel->setBoatType($ip->type);
+    $this->boatModel->setBoatLength($ip->length);
 
     $boatId = $this->db->createBoat($this->boatModel);
     $this->db->registerBoatFor($ip->memberId, $boatId);
