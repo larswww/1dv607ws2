@@ -72,7 +72,7 @@ class PartialFactory{
     if($ip->noIncomingParams){
       return new AddBoatForm();
     }
-    
+
     $this->boatModel->setBoatType($ip->length);
     $this->boatModel->setBoatLength($ip->type);
 
@@ -85,6 +85,7 @@ class PartialFactory{
   private function viewMember(){
     $ip = $this->incomingParams;
     $m = $this->db->getMember($_GET['id']);
+    print_r($m);
     return new ViewMember($m['ID'], $m['firstName'], $m['lastName'], $m['passportNumber'], $m['numberOfBoats']);
   }
 
