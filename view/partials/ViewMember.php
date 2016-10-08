@@ -8,6 +8,7 @@ class ViewMember{
   private $boats;
 
   public function __construct($memberAndBoats){
+    print_r($memberAndBoats);
     $member = $memberAndBoats['member'];
     $boats = $memberAndBoats['boats'];
 
@@ -19,7 +20,6 @@ class ViewMember{
   }
 
   private function boatlist(){
-    print_r($this->boats);
 
     if(!$this->boats){
       return "No boats";
