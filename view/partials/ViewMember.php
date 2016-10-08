@@ -10,8 +10,6 @@ class ViewMember{
   public function __construct($memberAndBoats){
     $member = $memberAndBoats[0]['member'];
     $boats = $memberAndBoats[0]['boats'];
-    print_r($boats);
-    // Array ( [0] => Array ( [type] => Other [0] => Other [length] => 0 [1] => 0 [ID] => 57f866c368f93 [2] => 57f866c368f93 [ownerID] => 57f857c764771 [3] => 57f857c764771 )
 
     $this->memberId = $member['ID'];
     $this->firstname = $member['firstName'];
