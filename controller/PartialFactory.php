@@ -5,15 +5,15 @@ class PartialFactory{
 
   private $action;
   private $db;
-    private $memberModel;
-    private $boatModel;
+  private $memberModel;
+  private $boatModel;
   private $incomingParams;
 
   public function __construct($database, $member, $boat){
     $this->action = (!empty($_GET) && isset($_GET['action'])) ? $_GET['action'] : 'blank';
     $this->db = $database;
-      $this->memberModel = $member;
-      $this->boatModel = $boat;
+    $this->memberModel = $member;
+    $this->boatModel = $boat;
     $this->incomingParams = new IncomingParams();
   }
 
@@ -44,14 +44,18 @@ class PartialFactory{
 
   private function editBoat(){
     $ip = $this->incomingParams;
+$arr = [$ip->type, $ip->length];
+print_r($arr);
     if($ip->noIncomingParams){
-      return new UpdateBoatForm();
+      $id = $_GET['boatId'];
+      $boat = $this->db->getBoat($id);
+      return new UpdateBoatForm($boat['ID'], $boat['length'], $boat['type']);
     }
 
     $this->boatModel->setBoatLength($ip->length);
-      $this->boatModel->setBoatType($ip->type);
+    $this->boatModel->setBoatType($ip->type);
 
-    $data = $this->db->updateBoat($ip->boatId, $this->boatModel); // Get data from corresponding model
+    $data = $this->db->updateBoat($ip->boatId, $this->boatModel);
     return new BoatUpdated();
   }
 
@@ -71,8 +75,8 @@ class PartialFactory{
       return new AddBoatForm();
     }
 
-    $this->boatModel->setBoatType($ip->length);
-    $this->boatModel->setBoatLength($ip->type);
+    $this->boatModel->setBoatType($ip->type);
+    $this->boatModel->setBoatLength($ip->length);
 
     $boatId = $this->db->createBoat($this->boatModel);
     $this->db->registerBoatFor($ip->memberId, $boatId);
@@ -81,30 +85,18 @@ class PartialFactory{
   }
 
   private function viewMember(){
-    $ip = $this->incomingParams;
-    $data = $this->db->getMember($_GET['id']);
+    $memberBoats = $this->db->getAllBoatsOwnedBy($_GET['id']);
+      $memberDetails = $this->db->getMember($_GET['id']);
 
-    $memberId = $data['ID'];
-    $firstname = $data['firstName'];
-    $lastname = $data['lastName'];
-    $personalNumber = $data['passportNumber'];
-    $boats = $data['numberOfBoats'];
-
-    return new ViewMember($memberId, $firstname, $lastname, $personalNumber, $boats);
+    return new ViewMember($memberDetails, $memberBoats);
   }
 
   private function UpdateMember(){
     $ip = $this->incomingParams;
-    $data = $this->db->getMember($_GET['id']);
+    $m = $this->db->getMember($_GET['id']);
 
     if($ip->noIncomingParams){
-      $memberId = $data['ID'];
-      $firstname = $data['firstName'];
-      $lastname = $data['lastName'];
-      $personalNumber = $data['passportNumber'];
-      $boats = $data['numberOfBoats'];
-
-      return new UpdateMemberForm($memberId, $firstname, $lastname, $personalNumber, $boats);
+      return new UpdateMemberForm($m['ID'], $m['firstName'], $m['lastName'], $m['passportNumber'], $m['numberOfBoats']);
     }
 
     $this->memberModel->setMemberName($ip->firstname, $ip->lastname);

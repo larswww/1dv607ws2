@@ -7,7 +7,6 @@ require_once("partials/BoatCreated.php");
 require_once("partials/BoatDeleted.php");
 require_once("partials/BoatUpdated.php");
 require_once("partials/CompactList.php");
-require_once("partials/CompactList.php");
 require_once("partials/CreateMemberForm.php");
 require_once("partials/Errorpartial.php");
 require_once("partials/MemberCreated.php");
@@ -21,7 +20,6 @@ require_once("partials/ViewMember.php");
 class MainLayout {
 
   private $maincontent;
-  private $title = "Välkommen till båtklubben den lila illern";
 
   public function __construct($partial){
     $this->maincontent = $partial->show();
@@ -41,7 +39,6 @@ class MainLayout {
             <a href='?action=compactList'>Compact</a>
             <a href='?action=createNewMember'>New member</a>
           </nav>
-            <h1>{$this->title}</h1>
             <div>
               {$this->maincontent}
             </div>

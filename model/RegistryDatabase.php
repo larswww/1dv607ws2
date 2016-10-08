@@ -268,13 +268,10 @@ class RegistryDatabase {
                 }
             }
 
-            // set it to NULL if not?
 
             array_push($membersAndBoats, $currentArrayEntry);
-
         }
 
         return $membersAndBoats;
-
     }
 }

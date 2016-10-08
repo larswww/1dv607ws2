@@ -4,7 +4,6 @@ require_once('model/RegistryDatabase.php');
 require_once('model/Member.php');
 require_once('model/Boat.php');
 
-
 // REQUIRE VIEW
 require_once("view/view.php");
 
@@ -13,8 +12,8 @@ require_once("controller/PartialFactory.php");
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
+
 $db = new model\registryDatabase();
-$test = $db->listMembers();
 $m = new model\Member();
 $b = new model\Boat();
 
