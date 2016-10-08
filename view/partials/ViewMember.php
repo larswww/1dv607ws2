@@ -20,7 +20,6 @@ class ViewMember{
 
   private function boatlist(){
     $boats = $this->boats;
-    print_r($boats);
 
     if(!count($boats)){
       return "No boats";
