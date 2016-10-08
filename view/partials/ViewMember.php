@@ -7,12 +7,14 @@ class ViewMember{
   private $personalNumber;
   private $boats;
 
-  public function __construct($memberId, $firstname, $lastname, $personalNumber, $boats = null){
+  public function __construct($memberAndBoats){
+    $member = $membersAndBoats['member'];
+    $boats = $membersAndBoats['boats'];
 
-    $this->memberId = $memberId;
-    $this->firstname = $firstname;
-    $this->lastname = $lastname;
-    $this->personalNumber = $personalNumber;
+    $this->memberId = $member['ID'];
+    $this->firstname = $member['firstName'];
+    $this->lastname = $member['lastName'];
+    $this->personalNumber = $member['passportNumber'];
     $this->boats = $boats;
   }
 
