@@ -83,7 +83,7 @@ class PartialFactory{
   }
 
   private function viewMember(){
-    $memberData = $m = $this->db->listMembers($_GET['id']);
+    $memberData = "hej"; // $m = $this->db->listMembers($_GET['id']);
 
     return new ViewMember($memberData);
   }
