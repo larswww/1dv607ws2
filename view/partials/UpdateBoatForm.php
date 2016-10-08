@@ -1,6 +1,6 @@
 <?php
 
-class UpdateBoat{
+class UpdateBoatForm{
 
   private $memberId;
   private $length;

@@ -44,16 +44,20 @@ class PartialFactory{
   }
 
   private function editBoat(){
+    $id = $_GET['boatId'];
     $ip = $this->incomingParams;
+
     if($ip->noIncomingParams){
-      // TODO: get length and type and id from $_GET['boatId'] (or just id?)
-      return new UpdateBoatForm($id, $length, $type);
+      $boat = $this->db->getBoat($id);
+
+      // If app crashes on upload here might be a good place to start bughunting
+      return new UpdateBoatForm($boat['ID'], $boat['length'], $boat['type']);
     }
 
     $this->boatModel->setBoatLength($ip->length);
     $this->boatModel->setBoatType($ip->type);
 
-    $data = $this->db->updateBoat($ip->boatId, $this->boatModel); // Get data from corresponding model
+    $data = $this->db->updateBoat($ip->boatId, $this->boatModel);
     return new BoatUpdated();
   }
 
