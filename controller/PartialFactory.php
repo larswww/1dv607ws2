@@ -43,10 +43,10 @@ class PartialFactory{
   }
 
   private function editBoat(){
-    $id = $_GET['boatId'];
     $ip = $this->incomingParams;
 
     if($ip->noIncomingParams){
+      $id = $_GET['boatId'];
       $boat = $this->db->getBoat($id);
       return new UpdateBoatForm($boat['ID'], $boat['length'], $boat['type']);
     }
