@@ -84,8 +84,8 @@ class PartialFactory{
   }
 
   private function viewMember(){
-    $memberData = $this->db->listMembers($_GET['id']);
-
+    $id = $_GET['id'];
+    $memberData = [$this->db->getMember($id), $this->db->getAllBoatsOwnedBy($id)];
     return new ViewMember($memberData);
   }
 
