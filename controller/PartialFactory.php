@@ -44,7 +44,8 @@ class PartialFactory{
 
   private function editBoat(){
     $ip = $this->incomingParams;
-
+$arr = [$ip->type, $ip->length];
+print_r($arr);
     if($ip->noIncomingParams){
       $id = $_GET['boatId'];
       $boat = $this->db->getBoat($id);
