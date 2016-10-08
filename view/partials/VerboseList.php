@@ -14,10 +14,11 @@ class VerboseList{
       for ($i = 0; $i < count($this->memberList); $i++) {
           $currentMember = $this->memberList[$i];
           $boatList = $this->boatList($currentMember);
-
+          $id = $currentMember['member']['ID'];
 
           $str .= "
       <div class='listBox'>
+      <a href='?action=viewMember&id={$id}'>view member info</a><br>
       name: {$currentMember['member']['firstName']} {$currentMember['member']['lastName']}<br>
       personal id: {$currentMember['member']['passportNumber']}<br>
       id: {$currentMember['member']['ID']}
