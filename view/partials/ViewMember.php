@@ -26,9 +26,9 @@ class ViewMember{
       return "No boats";
     }
     //
-    $str = "<dl>";
+    //$str = "<dl>";
     for($i = 0; $i < count($boats); i++){
-      $str .= "x";
+    //  $str .= "x";
     //   $id = $boats[$i]['ID'];
     //   $type = $boats[$i]['type'];
     //   $length = $boats[$i]['length'];
@@ -43,7 +43,9 @@ class ViewMember{
     //   <dd>Id:&nbsp;&nbsp;&nbsp;&nbsp; {$length}</dd>
     //   ";
     }
-    return $str . "</dl>";
+    //return $str . "</dl>";
+
+    return "some boats";
   }
 
   public function show(){
