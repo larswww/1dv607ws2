@@ -218,7 +218,7 @@ class RegistryDatabase {
     }
 
 
-    public function listMembers() : array {
+    public function listMembers($findOnlyMemberWithId = null) : array {
 
         $allMembersQuery = $this->registry->prepare("SELECT passportNumber, firstName, lastName, ID FROM members");
         $allMembersQuery->execute();
@@ -242,13 +242,19 @@ class RegistryDatabase {
                 }
             }
 
-            // set it to NULL if not?
+            if($findOnlyMemberWithId && $findOnlyMemberWithId == $currentMemberID){
+              array_push($membersAndBoats, $currentArrayEntry);
+            } else {
+              array_push($membersAndBoats, $currentArrayEntry);
+            }
 
-            array_push($membersAndBoats, $currentArrayEntry);
+
+
 
         }
 
         return $membersAndBoats;
 
     }
+
 }

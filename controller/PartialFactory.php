@@ -84,7 +84,9 @@ class PartialFactory{
 
   private function viewMember(){
     $ip = $this->incomingParams;
-    $m = $this->db->getMember($_GET['id']);
+    //$m = $this->db->getMember($_GET['id']);
+    $memberAndBoats = $m = $this->db->listMembers($_GET['id']);
+
     print_r($m);
     return new ViewMember($m['ID'], $m['firstName'], $m['lastName'], $m['passportNumber'], $m['numberOfBoats']);
   }
