@@ -7,7 +7,7 @@ class ViewMember{
   private $personalNumber;
   private $boats;
 
-  public function __construct($memberId, $firstname, $lastname, $personalNumber, $boats){
+  public function __construct($memberId, $firstname, $lastname, $personalNumber, $boats = null){
 
     $this->memberId = $memberId;
     $this->firstname = $firstname;
@@ -17,7 +17,7 @@ class ViewMember{
   }
 
   private function boatlist(){
-    var_dump($this->boats);
+    print_r($this->boats);
 
     if(!$this->boats){
       return "No boats";

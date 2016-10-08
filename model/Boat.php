@@ -21,7 +21,6 @@ class Boat {
         if ($type === "Sailboat" || $type === "Motorsailer" || $type === "kayak/Canoe") {
             $this->type = $type;
         } else {
-          echo "type is {$type} but storing as Other!!!";
             $this->type = "Other";
         }
     }
