@@ -39,7 +39,6 @@ class PartialFactory{
 
   private function verboseList(){
     $data = $this->db->listMembers();
-    print_r($data);
     return new VerboseList($data);
   }
 
