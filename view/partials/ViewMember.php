@@ -8,8 +8,8 @@ class ViewMember{
   private $boats;
 
   public function __construct($memberAndBoats){
-    $member = $membersAndBoats['member'];
-    $boats = $membersAndBoats['boats'];
+    $member = $memberAndBoats['member'];
+    $boats = $memberAndBoats['boats'];
 
     $this->memberId = $member['ID'];
     $this->firstname = $member['firstName'];
