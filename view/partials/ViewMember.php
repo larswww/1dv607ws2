@@ -28,7 +28,7 @@ class ViewMember{
     //
     $str = "<dl>";
     for($i = 0; $i < count($boats); i++){
-      str .= $i;
+      $str .= $i;
     //   $id = $boats[$i]['ID'];
     //   $type = $boats[$i]['type'];
     //   $length = $boats[$i]['length'];
