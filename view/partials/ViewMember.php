@@ -58,5 +58,5 @@ class ViewMember{
   //   <a href='?action=updateMember&id={$this->memberId}'>Update member info</a>
   //   <a href='?action=addBoat&memberId={$this->memberId}'>Add a boat</a>
   //   ";
-  // }
+  }
 }
