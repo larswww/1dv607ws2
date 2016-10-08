@@ -17,14 +17,14 @@ class VerboseList{
           $id = $currentMember['member']['ID'];
 
           $str .= "
-      <div class='listBox'>
-      <a href='?action=viewMember&id={$id}'>view member info</a><br>
-      name: {$currentMember['member']['firstName']} {$currentMember['member']['lastName']}<br>
-      personal id: {$currentMember['member']['passportNumber']}<br>
-      id: {$currentMember['member']['ID']}
+          <div class='listBox'>
+          <a href='?action=viewMember&id={$id}'>view member info</a><br>
+          name: {$currentMember['member']['firstName']} {$currentMember['member']['lastName']}<br>
+          personal id: {$currentMember['member']['passportNumber']}<br>
+          id: {$currentMember['member']['ID']}
 
-      <dd>Boat: $boatList</dd>
-      </div>
+          <dd>Boat: $boatList</dd>
+          </div>
       ";
       }
 
@@ -39,11 +39,13 @@ class VerboseList{
 
           foreach ($member['boats'] as $key => $value) {
               $str .= "
-              (<a href='?action=editBoat&boatId={$value['ID']}'>edit</a>
-                 <a href='?action=deleteBoat&boatId={$value['ID']}'>Delete</a>)
-      </dt>
-      <dd>Type:&nbsp;&nbsp;&nbsp;{$value['type']}</dd>
-      <dd>Length: {$value['length']}</dd>
+              <dt>
+              <a href='?action=editBoat&boatId={$value['ID']}'>edit</a><br>
+              <a href='?action=deleteBoat&boatId={$value['ID']}'>Delete</a>
+              </dt>
+
+              <dd>Type:&nbsp;&nbsp;&nbsp;{$value['type']}</dd>
+              <dd>Length: {$value['length']}</dd>
               ";
           }
 
