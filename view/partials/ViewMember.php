@@ -24,9 +24,9 @@ class ViewMember{
     $boats = $this->boats;
     print_r($boats);
 
-    // if(!count($boats)){
-    //   return "No boats";
-    // }
+    if(!count($boats)){
+      return "No boats";
+    }
     //
     // $str = "<dl>";
     // for($i = 0; i < count($boats); i++){
