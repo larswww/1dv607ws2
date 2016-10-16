@@ -44,8 +44,7 @@ class PartialFactory{
 
   private function editBoat(){
     $ip = $this->incomingParams;
-$arr = [$ip->type, $ip->length];
-print_r($arr);
+    $arr = [$ip->type, $ip->length];
     if($ip->noIncomingParams){
       $id = $_GET['boatId'];
       $boat = $this->db->getBoat($id);
@@ -86,7 +85,7 @@ print_r($arr);
 
   private function viewMember(){
     $memberBoats = $this->db->getAllBoatsOwnedBy($_GET['id']);
-      $memberDetails = $this->db->getMember($_GET['id']);
+    $memberDetails = $this->db->getMember($_GET['id']);
 
     return new ViewMember($memberDetails, $memberBoats);
   }
