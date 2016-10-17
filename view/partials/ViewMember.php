@@ -8,9 +8,6 @@ class ViewMember{
   private $boats;
 
   public function __construct($memberDetails, $memberBoats){
-//    $member = $memberAndBoats[0]['member'];
-//    $boats = $memberAndBoats[0]['boats'];
-
     $this->memberId = $memberDetails['ID'];
     $this->firstname = $memberDetails['firstName'];
     $this->lastname = $memberDetails['lastName'];
