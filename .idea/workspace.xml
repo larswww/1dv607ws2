@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2acacf1-a72e-41e9-ba4f-57f373355825" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Peer_review_lw222ii.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/incomingPeer1.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reviewHenryPapMfl.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reviewRikardOsterlund.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changes.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/PartialFactory.php" afterPath="$PROJECT_DIR$/controller/PartialFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Member.php" afterPath="$PROJECT_DIR$/model/Member.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/RegistryDatabase.php" afterPath="$PROJECT_DIR$/model/RegistryDatabase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Validate.php" afterPath="$PROJECT_DIR$/model/Validate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/CompactList.php" afterPath="$PROJECT_DIR$/view/partials/CompactList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/UpdateBoatForm.php" afterPath="$PROJECT_DIR$/view/partials/UpdateBoatForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/UpdateMemberForm.php" afterPath="$PROJECT_DIR$/view/partials/UpdateMemberForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/VerboseList.php" afterPath="$PROJECT_DIR$/view/partials/VerboseList.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/partials/ViewMember.php" afterPath="$PROJECT_DIR$/view/partials/ViewMember.php" />
     </list>
     <ignored path="1dv607ws2.iws" />
@@ -84,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PartialFactory.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PartialFactory.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/PartialFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
+            <state relative-caret-position="351">
+              <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -113,25 +112,25 @@
       <file leaf-file-name="ViewMember.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/partials/ViewMember.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-95">
-              <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
+            <state relative-caret-position="120">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
-                <marker date="1478771978000" expanded="true" signature="879:1055" ph="..." />
-                <marker date="1478771978000" expanded="true" signature="879:1190" ph="..." />
-                <marker date="1478771978000" expanded="true" signature="1072:1078" ph=" " />
-                <marker date="1478771978000" expanded="true" signature="1078:1084" ph=" " />
-                <marker date="1478771978000" expanded="true" signature="1084:1090" ph=" " />
-                <marker date="1478771978000" expanded="true" signature="1149:1155" ph=" " />
-                <marker date="1478771978000" expanded="true" signature="1155:1161" ph=" " />
-                <marker date="1478771978000" expanded="true" signature="1161:1167" ph=" " />
-                <marker date="1478771978000" expanded="true" signature="1167:1173" ph=" " />
-                <marker date="1478771978000" expanded="true" signature="1315:1466" ph="..." />
+                <marker date="1478779566000" expanded="true" signature="790:966" ph="..." />
+                <marker date="1478779566000" expanded="true" signature="790:1101" ph="..." />
+                <marker date="1478779566000" expanded="true" signature="983:989" ph=" " />
+                <marker date="1478779566000" expanded="true" signature="989:995" ph=" " />
+                <marker date="1478779566000" expanded="true" signature="995:1001" ph=" " />
+                <marker date="1478779566000" expanded="true" signature="1060:1066" ph=" " />
+                <marker date="1478779566000" expanded="true" signature="1066:1072" ph=" " />
+                <marker date="1478779566000" expanded="true" signature="1072:1078" ph=" " />
+                <marker date="1478779566000" expanded="true" signature="1078:1084" ph=" " />
+                <marker date="1478779566000" expanded="true" signature="1226:1377" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistryDatabase.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegistryDatabase.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/RegistryDatabase.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2415">
@@ -214,13 +213,13 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/model/Validate.php" />
         <option value="$PROJECT_DIR$/view/partials/CompactList.php" />
-        <option value="$PROJECT_DIR$/view/partials/ViewMember.php" />
         <option value="$PROJECT_DIR$/view/partials/UpdateBoatForm.php" />
         <option value="$PROJECT_DIR$/view/partials/VerboseList.php" />
         <option value="$PROJECT_DIR$/view/partials/UpdateMemberForm.php" />
         <option value="$PROJECT_DIR$/model/Member.php" />
-        <option value="$PROJECT_DIR$/controller/PartialFactory.php" />
         <option value="$PROJECT_DIR$/model/RegistryDatabase.php" />
+        <option value="$PROJECT_DIR$/view/partials/ViewMember.php" />
+        <option value="$PROJECT_DIR$/controller/PartialFactory.php" />
       </list>
     </option>
   </component>
@@ -239,8 +238,8 @@
   <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://127.0.0.1/" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -430,19 +429,19 @@
       <workItem from="1476956643767" duration="614000" />
       <workItem from="1476974346852" duration="233000" />
       <workItem from="1478251681678" duration="735000" />
-      <workItem from="1478748656654" duration="20389000" />
+      <workItem from="1478748656654" duration="20588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118260000" />
+    <option name="totallyTimeSpent" value="118459000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.8096055" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15" sideWeight="0.8125819" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3087318" sideWeight="0.5062631" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -450,8 +449,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.1903945" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29504234" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15" sideWeight="0.18741809" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24230388" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -527,7 +526,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/view/partials/ViewMember.php</url>
-          <line>18</line>
+          <line>17</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -547,12 +546,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/view/partials/ViewMember.php</url>
-          <line>21</line>
+          <line>20</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/controller/PartialFactory.php</url>
-          <line>67</line>
+          <line>72</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
@@ -949,25 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/partials/ViewMember.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
-          <folding>
-            <marker date="1478771978000" expanded="true" signature="879:1055" ph="..." />
-            <marker date="1478771978000" expanded="true" signature="879:1190" ph="..." />
-            <marker date="1478771978000" expanded="true" signature="1072:1078" ph=" " />
-            <marker date="1478771978000" expanded="true" signature="1078:1084" ph=" " />
-            <marker date="1478771978000" expanded="true" signature="1084:1090" ph=" " />
-            <marker date="1478771978000" expanded="true" signature="1149:1155" ph=" " />
-            <marker date="1478771978000" expanded="true" signature="1155:1161" ph=" " />
-            <marker date="1478771978000" expanded="true" signature="1161:1167" ph=" " />
-            <marker date="1478771978000" expanded="true" signature="1167:1173" ph=" " />
-            <marker date="1478771978000" expanded="true" signature="1315:1466" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/partials/UpdateMemberForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1024,14 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/PartialFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/RegistryDatabase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2415">
@@ -1055,6 +1027,33 @@
             <marker date="1478777234000" expanded="true" signature="3740:3779" ph="SELECT * FRO... ${$whichDB}" />
             <marker date="1478777234000" expanded="true" signature="4239:4277" ph="SELECT membe... memberObjects" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/partials/ViewMember.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1478779566000" expanded="true" signature="790:966" ph="..." />
+            <marker date="1478779566000" expanded="true" signature="790:1101" ph="..." />
+            <marker date="1478779566000" expanded="true" signature="983:989" ph=" " />
+            <marker date="1478779566000" expanded="true" signature="989:995" ph=" " />
+            <marker date="1478779566000" expanded="true" signature="995:1001" ph=" " />
+            <marker date="1478779566000" expanded="true" signature="1060:1066" ph=" " />
+            <marker date="1478779566000" expanded="true" signature="1066:1072" ph=" " />
+            <marker date="1478779566000" expanded="true" signature="1072:1078" ph=" " />
+            <marker date="1478779566000" expanded="true" signature="1078:1084" ph=" " />
+            <marker date="1478779566000" expanded="true" signature="1226:1377" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/PartialFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

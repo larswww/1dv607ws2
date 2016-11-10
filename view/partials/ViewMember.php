@@ -8,14 +8,13 @@ class ViewMember{
   private $boats;
 
   public function __construct(\model\Member $member){
-//    $member = $memberAndBoats[0]['member'];
-//    $boats = $memberAndBoats[0]['boats'];
 
     $this->memberId = $member->getID();
     $this->firstname = $member->getFirstName();
     $this->lastname = $member->getLastName();
     $this->personalNumber = $member->getPassportNumber();
     $this->boats = $member->getBoats();
+
   }
 
   private function boatlist(){
