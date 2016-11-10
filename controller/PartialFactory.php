@@ -44,23 +44,31 @@ class PartialFactory{
 
   private function editBoat(){
     $ip = $this->incomingParams;
-$arr = [$ip->type, $ip->length];
-print_r($arr);
+
     if($ip->noIncomingParams){
-      $id = $_GET['boatId'];
-      $boat = $this->db->getBoat($id);
-      return new UpdateBoatForm($boat['ID'], $boat['length'], $boat['type']);
+      $boatNr = $_GET['boatId'];
+      $memberId = $_GET['memberId'];
+      $member = $this->db->getMember($memberId);
+      $memberBoats = $member->getBoats();
+
+      return new UpdateBoatForm($memberBoats[$boatNr], $memberId, $boatNr);
     }
 
-    $this->boatModel->setBoatLength($ip->length);
-    $this->boatModel->setBoatType($ip->type);
-
-    $data = $this->db->updateBoat($ip->boatId, $this->boatModel);
+    $memberId = $_POST['boatId'];
+    $member = $this->db->getMember($memberId);
+      $this->boatModel->setBoatType($ip->type);
+      $this->boatModel->setBoatLength($ip->length);
+      $member->updateBoat($this->boatModel, $ip->boatNr);
+    $this->db->updateMember($memberId, $member);
     return new BoatUpdated();
   }
 
   private function deleteBoat(){
-    $this->db->deleteBoat($_GET['boatId']);
+      $id = $_GET['memberId'];
+      $member = $this->db->getMember($id);
+      $member->removeBoat($_GET['boatId']);
+      $this->db->updateMember($id, $member);
+
     return new BoatDeleted();
   }
 
@@ -77,18 +85,18 @@ print_r($arr);
 
     $this->boatModel->setBoatType($ip->type);
     $this->boatModel->setBoatLength($ip->length);
+     $addForMember = $this->db->getMember($ip->memberId);
+      $addForMember->addBoat($this->boatModel);
 
-    $boatId = $this->db->createBoat($this->boatModel);
-    $this->db->registerBoatFor($ip->memberId, $boatId);
+      $this->db->updateMember($ip->memberId, $addForMember);
 
     return new BoatCreated();
   }
 
   private function viewMember(){
-    $memberBoats = $this->db->getAllBoatsOwnedBy($_GET['id']);
-      $memberDetails = $this->db->getMember($_GET['id']);
+      $member = $this->db->getMember($_GET['id']);
 
-    return new ViewMember($memberDetails, $memberBoats);
+    return new ViewMember($member);
   }
 
   private function UpdateMember(){
@@ -96,13 +104,13 @@ print_r($arr);
     $m = $this->db->getMember($_GET['id']);
 
     if($ip->noIncomingParams){
-      return new UpdateMemberForm($m['ID'], $m['firstName'], $m['lastName'], $m['passportNumber'], $m['numberOfBoats']);
+      return new UpdateMemberForm($m);
     }
 
-    $this->memberModel->setMemberName($ip->firstname, $ip->lastname);
-    $this->memberModel->setPassportNumber($ip->personalNumber);
+    $m->setMemberName($ip->firstname, $ip->lastname);
+      $m->setPassportNumber($ip->personalNumber);
 
-    $this->db->updateMember($ip->id, $this->memberModel);
+    $this->db->updateMember($ip->id, $m);
 
     return new MemberUpdated();
   }

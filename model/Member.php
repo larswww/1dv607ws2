@@ -6,9 +6,12 @@ class Member {
 
     private $firstname;
     private $lastname;
+    private $id;
+    private $boats = Array();
 
     public function __construct() {
         $this->validate = new Validate();
+        $this->id = uniqid();
     }
 
     // TODO clarify which type of identification number the boatclub actually wants.
@@ -22,6 +25,28 @@ class Member {
 
     public function getFirstName() {
         return $this->firstname;
+    }
+
+    public function getID() {
+        return $this->id;
+    }
+
+    public function addBoat(Boat $boat) {
+        array_push($this->boats, $boat);
+    }
+
+    public function updateBoat(Boat $boat, $boatNr) {
+        $this->boats[$boatNr] = $boat;
+
+    }
+
+    public function removeBoat($boatNr) {
+        unset($this->boats[$boatNr]);
+
+    }
+
+    public function removeBoatNumber($i) {
+        unset($this->boats[$i]);
     }
 
     public function getLastName() {
@@ -49,4 +74,10 @@ class Member {
         $this->validate->containsScript($passportNumber);
         $this->passportNumber = $passportNumber;
     }
+
+    public function getBoats() {
+        return $this->boats;
+    }
+
+
 }

@@ -7,15 +7,15 @@ class ViewMember{
   private $personalNumber;
   private $boats;
 
-  public function __construct($memberDetails, $memberBoats){
+  public function __construct(\model\Member $member){
 //    $member = $memberAndBoats[0]['member'];
 //    $boats = $memberAndBoats[0]['boats'];
 
-    $this->memberId = $memberDetails['ID'];
-    $this->firstname = $memberDetails['firstName'];
-    $this->lastname = $memberDetails['lastName'];
-    $this->personalNumber = $memberDetails['passportNumber'];
-    $this->boats = $memberBoats;
+    $this->memberId = $member->getID();
+    $this->firstname = $member->getFirstName();
+    $this->lastname = $member->getLastName();
+    $this->personalNumber = $member->getPassportNumber();
+    $this->boats = $member->getBoats();
   }
 
   private function boatlist(){
@@ -27,14 +27,15 @@ class ViewMember{
     //
     $str = "<dl>";
     for($i = 0; $i < count($boats); $i++){
-      $id = $boats[$i]['ID'];
-      $type = $boats[$i]['type'];
-      $length = $boats[$i]['length'];
+      //$id = $boats[$i]['ID'];
+        $id = $this->memberId;
+        $type = $boats[$i]->getBoatType();
+        $length = $boats[$i]->getBoatLength();
 
       $str .= "
       <dt>Boat {$i}:<br>
-        <a href='?action=editBoat&boatId={$id}'>edit</a><br>
-        <a href='?action=deleteBoat&boatId={$id}'>Delete</a>
+        <a href='?action=editBoat&boatId={$i}&memberId={$id}'>edit</a><br>
+        <a href='?action=deleteBoat&boatId={$i}&memberId={$id}'>Delete</a>
       </dt>
       <dd>Type:&nbsp;&nbsp;&nbsp;{$type}</dd>
       <dd>Length: {$length}</dd>
@@ -46,7 +47,7 @@ class ViewMember{
 
   public function show(){
     $boatlist = $this->boatlist();
-    return "
+    return "\
     <div>
       <span>name: {$this->firstname} {$this->lastname}</span>
       <span>Personal number: {$this->personalNumber}</span>

@@ -6,17 +6,20 @@ class UpdateBoatForm{
   private $length;
   private $type;
 
-  public function __construct($boatId, $length, $type){
-    $this->boatId = $boatId;
-    $this->length = $length;
-    $this->type = $type;
+  public function __construct(\model\Boat $boat, $memberId, $boatNr){
+    $this->memberId = $memberId;
+    $this->length = $boat->getBoatLength();
+    $this->type = $boat->getBoatType();
+    $this->boatNr = $boatNr;
   }
 
   public function show(){
     return "
     <form action='?action=editBoat' method='POST'>
 
-    <input type='hidden' name='boatId' value='{$this->boatId}'>
+
+    <input type='hidden' name='boatId' value='{$this->memberId}'>
+    <input type='hidden' name='boatNr' value='{$this->boatNr}'
 
     <legend>Length
       <input type='text' name='length' size=3>

@@ -7,11 +7,12 @@ class UpdateMemberForm{
   private $lastname;
   private $personalNumber;
 
-  public function __construct($id, $firstname, $lastname, $personalNumber){
-    $this->id = $id;
-    $this->firstname = $firstname;
-    $this->lastname = $lastname;
-    $this->personalNumber = $personalNumber;
+  public function __construct(\model\Member $member){
+    $this->id = $member->getID();
+    $this->firstname = $member->getFirstName();
+    $this->lastname = $member->getLastName();
+    $this->personalNumber = $member->getPassportNumber();
+
   }
 
   public function show(){
